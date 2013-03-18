@@ -13,21 +13,31 @@ $result = mysql_query("SELECT * FROM courses WHERE course_id = '$id'");
 		$coursename = $course['course_title'];
 		$coursenum = $course['course_number'];
 		$coursedesc = $course['course_description'];
-		echo "<h1>$coursenum: $coursename</h1><br>
+		echo "<h1>$coursenum: $coursename</h1>
 		$coursedesc<br>";
-		
-# finding associated skills
-$result = mysql_query("SELECT * FROM courses_skills WHERE course_id = '$id'");
-	while ($row = mysql_fetch_array($result)) {
-		$skillid = $row['skill_id'];
-		
-# looking up names of associated skills
-		echo "<br>Skills taught:";
-		$result = mysql_query("SELECT * FROM skills WHERE skill_id = '$skillid'");
-		$skills = mysql_fetch_assoc($result);
-		$skillname = $skills['skill_name'];
-		echo "<br><a href=skill.php?id=$skillid>$skillname</a><br>";
-		}		
+			
+# finding associated skill ID
+$result = mysql_query("SELECT skill_id FROM courses_skills WHERE course_id = '$id'");
+$skills = array();
+while ($row = mysql_fetch_array($result)) {
+	$skillid = $row['skill_id'];
+	$skills[] = $skillid;
+	}
+	
+# looking up associated skill info
+echo "<b><br>Skills this course teaches:</b>";
+
+foreach ($skills as $value) {
+	$result = mysql_query("SELECT * FROM skills WHERE skill_id = '$value'");
+	$skill = mysql_fetch_assoc($result);
+	$skillname = $skill['skill_name'];
+	echo "<br><a href=skill.php?id=$skillid>$skillname</a>";
+	
+	}
+echo "<br>";
+
+
+
 
 ?>
 
