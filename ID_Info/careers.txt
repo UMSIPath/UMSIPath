@@ -1,0 +1,6 @@
+"1";"Digital Archivist";"Working with digital materials archivally."
+"2";"User Experience Desginer";"Designing experience for the users."
+"3";"Processing Archivist";"You process collections."
+"4";"Mobile App Developer";"Make stuff work from your iPhone"
+"5";"Youth Librarian";"Teach kids to read"
+"6";"Academic Librarian";"Save the professors!"

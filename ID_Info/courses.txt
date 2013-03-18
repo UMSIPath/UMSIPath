@@ -1,0 +1,5 @@
+"1";"Database Application and Design";"SI 664";"A course about databases, mostly MySQL and PHP.";"www.php-intro.com"
+"2";"Digitization for Preservation";"SI 675";"How to digitize for preservation.";"www.ctools.umich.edu"
+"3";"Contextual Inquiry";"SI 501";"inquire, but with context.";"www.501willburnyoursoul.com"
+"4";"Preserving Sound and Motion";"SI 678";"Preserve sound. and motion.";"nara.gov"
+"5";"Python";"SI 502";"Learn python. Intro level.";"drchuck.com"
