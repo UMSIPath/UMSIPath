@@ -17,7 +17,7 @@ $result = mysql_query("SELECT * FROM courses WHERE course_id = '$id'");
 		$coursedesc<br>";
 		
 # finding associated skills
-$result = mysql_query("SELECT * FROM courses_skills WHERE skill_id = '$id'");
+$result = mysql_query("SELECT * FROM courses_skills WHERE course_id = '$id'");
 	while ($row = mysql_fetch_array($result)) {
 		$skillid = $row['skill_id'];
 		
