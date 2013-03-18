@@ -1,11 +1,17 @@
 <html>
+<head>
+<?php include '/v1/includes/header.php'; ?>
+</head>
 
 <body>
-<?php include '/includes/header.php'; ?>
-<h1>Skills Info</h1>
-<p>skills/skills.php</p>
-<?php include '/includes/breadcrump.php'; ?>
+<?php include '/v1/includes/menu.php'; ?>
 
-<?php include '/includes/footer.php'; ?>
+<div class="main">
+<h1>Skills</h1>
+<p><?php include '/v1/includes/breadcrumbs.php'; ?></p>
+<p> Lorem Ipsum stuff... </p>
+
+</div>
+<?php include '/v1/includes/footer.php'; ?>
 </body>
 </html>
