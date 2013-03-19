@@ -1,13 +1,3 @@
-<?php include("breadcrumbs.php"); ?>
-
-<!DOCTYPE html>
-<head>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-</head>
-
-<html>
-<body>
-
 <div>
   <h1>Which of these things do you have? <br>Select all that apply. </h1>  
   <form action="checklisttest.php">
@@ -22,6 +12,3 @@
 
 <?php include("findme/findme.html"); ?>
 
-  
- </body>
-</html>
