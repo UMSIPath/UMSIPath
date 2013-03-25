@@ -23,6 +23,14 @@ h1 {
   margin-bottom: 10px;
 }
 
+a {
+    text-decoration:none;
+    color: #F15A24;
+    }
+a:hover {
+    color: #000;
+    }
+
 /* // Checklist Styles // */
 
 /* hide checkbox */

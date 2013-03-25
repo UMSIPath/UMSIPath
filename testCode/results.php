@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  <link href="styles-01.css" rel="stylesheet" type="text/css">
+</head>
+
+
 <?php
 require_once "db.php";
 session_start();
@@ -9,7 +16,7 @@ $skills = $_POST['selectedskills'];
 
 # looping through array
 foreach ($skills as $value) {
-	echo "Skill: <b>$value</b></br>";
+	echo "<h1><b>Skill:</b> $value</h1>";
 
 # locating skill ID
 	$result = mysql_query("SELECT skill_id FROM skills WHERE skill_name = '$value'");
@@ -25,7 +32,7 @@ foreach ($skills as $value) {
 	}
 	
 # looking up associated course info
-	echo "<br><b>Relevant courses:</b>";
+	echo "<b>Relevant courses:</b>";
 	foreach ($courses as $value) {
 		$result = mysql_query("SELECT * FROM courses WHERE course_id = '$value'");
 		$course = mysql_fetch_assoc($result);
