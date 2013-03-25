@@ -4,6 +4,8 @@
   <link href="styles-01.css" rel="stylesheet" type="text/css">
 </head>
 
+<html>
+<body>
 
 <?php
 require_once "db.php";
@@ -60,3 +62,6 @@ else {
 }
 
 ?>
+
+</body>
+</html>
