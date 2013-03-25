@@ -4,16 +4,19 @@
   <link href="styles-01.css" rel="stylesheet" type="text/css">
 </head>
 
+<html>
+
+<body>
+
+<div>
+<h1>Which skills are you interested in?<br>Select all that apply.</h1>
+<form action="results.php" method="post">
+
 <?php
 require_once "db.php";
 session_start();
 
 $result = mysql_query("SELECT * FROM skills"); 
-
-echo '
-<div>
-<h1>Which skills are you interested in?<br>Select all that apply.</h1>
-<form action="results.php" method="post">'; 
 
 while($row = mysql_fetch_array($result)) 
   { 
@@ -21,8 +24,12 @@ while($row = mysql_fetch_array($result))
   	$id = $row[skill_id];
 	echo '<input id="' . $id . '" type="checkbox" name="selectedskills[]" value="' . $name . '" ><label for="' . $id . '" >' . $name . '</label><br>';
 }
-
-echo '<input type="submit" class="button" value="Next"></form>
-</div>';
   
 ?>
+
+<input type="submit" class="button" value="Next"></form>
+</div>
+
+</body>
+
+</html>
