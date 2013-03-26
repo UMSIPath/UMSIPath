@@ -12,7 +12,7 @@
 <ul class="menu">
 <p>skills navigation</p>
 <li>   <a href="/v1/skills/index.php"> index</a></li>
-<li>   <a href="/v1/skills/choose.php"> choose</a></li>
+<li>   <a href="../v1/skills/choose.php"> choose</a></li>
 <li>   <a href="/v1/skills/skills.php"> skills info</a></li>
 <li>   <a href="/v1/skills/recommendations.php"> recommendations</a></li>
 </ul>
