@@ -1,3 +1,5 @@
+
+
 <?php
 require_once "db.php";
 session_start();
@@ -37,7 +39,34 @@ foreach ($skills as $value) {
 echo "<br>";
 
 
-
-
 ?>
 
+
+
+<DIV class=”favorite”><input type="submit" class ="button" value="SAVE"></DIV>
+<script src="ajax/ajax_framework.js" language="javascript">
+/*
+jess added this code. this is the code to submit the "save" info.
+//it takes the course number and posts it to a different php file that puts it in the db.
+//if it does not work, blame jess.
+
+#jess added this code. this is the placeholder for the "save" button.*/
+
+
+$('.favorite').click(function() {
+var heading=$(“h1”).html()
+var coursedata = heading.split(‘:’)
+var coursenumber = coursedata[0]
+  $.ajax({
+    'url' : 'addtofavorites.php',
+    'type' : 'POST',
+    'data' : {number : coursenumber},
+    'success' : function(data) {
+      if (data == 'saved') {
+        alert('Saved');
+      }
+    }
+  });
+});
+
+</script>
