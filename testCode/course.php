@@ -38,6 +38,7 @@ foreach ($skills as $value) {
 	}
 echo "<br>";
 
+# related careers?
 
 ?>
 

@@ -34,5 +34,7 @@ foreach ($courses as $value) {
 	}
 echo "<br>";
 
+# related careers?
+
 
 ?>

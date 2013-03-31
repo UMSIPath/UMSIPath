@@ -9,20 +9,20 @@
 <body>
 
 <div>
-<h1>Which skills are you interested in?<br>Select all that apply.</h1>
-<form action="results.php" method="post">
+<h1>What career sounds interesting to you?<br>Select all that apply.</h1>
+<form action="searchbycareer_result.php" method="post">
 
 <?php
 require_once "db.php";
 session_start();
 
-$result = mysql_query("SELECT * FROM skills"); 
+$result = mysql_query("SELECT * FROM careers"); 
 
 while($row = mysql_fetch_array($result)) 
   { 
-  	$name = $row[skill_name];
-  	$id = $row[skill_id];
-	echo '<input id="' . $id . '" type="checkbox" name="selectedskills[]" value="' . $name . '" ><label for="' . $id . '" >' . $name . '</label><br>';
+  	$title = $row[career_title];
+  	$id = $row[career_id];
+	echo '<input id="' . $id . '" type="checkbox" name="selectedcareers[]" value="' . $title . '" ><label for="' . $id . '" >' . $title . '</label><br>';
 }
   
 ?>
