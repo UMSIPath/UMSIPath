@@ -21,11 +21,11 @@
 
 <html>
 <head>
-<?php include 'includes/header.php'; ?>
+<?php include 'includes/head.php'; ?>
 </head>
 
 <body>
-<?php include 'includes/menu.php'; ?>
+<?php include 'includes/navigation.php'; ?>
 
 <div class="main">
 <h1>Login</h1>
