@@ -6,7 +6,7 @@
 
 <html>
 <head>
-<?php include 'includes/head.php'; ?>
+<?php include 'includes/header.php'; ?>
 </head>
 
 <body>

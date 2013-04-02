@@ -1,10 +1,10 @@
 <html>
 <head>
-<?php include 'includes/head.php'; ?>
+<?php include 'includes/header.php'; ?>
 </head>
 
 <body>
-<?php include 'includes/navigation.php'; ?>
+<?php include 'includes/menu.php'; ?>
 
 <div class="main">
 <h1>Contact</h1>
