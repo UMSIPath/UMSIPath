@@ -1,5 +1,5 @@
 <?php include('../includes/head.php'); ?>
-    <title>UMSI / Discover: Browse All Skills</title>
+    <title>UMSI / Discover: Find Courses by Skills</title>
     </head>
 
 

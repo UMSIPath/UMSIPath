@@ -1,4 +1,11 @@
+<!DOCTYPE html>
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  <link href="styles-01.css" rel="stylesheet" type="text/css">
+</head>
 
+<html>
+<body>
 
 <?php
 require_once "db.php";
@@ -38,10 +45,9 @@ foreach ($skills as $value) {
 	}
 echo "<br>";
 
+# related careers?
 
 ?>
-
-
 
 <DIV class=”favorite”><input type="submit" class ="button" value="SAVE"></DIV>
 <script src="ajax/ajax_framework.js" language="javascript">
@@ -70,3 +76,6 @@ var coursenumber = coursedata[0]
 });
 
 </script>
+
+</html>
+</body>
