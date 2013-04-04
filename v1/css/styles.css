@@ -583,6 +583,15 @@ h1.section-header-single {
 	padding-top:55px;
 }
 
+h1.section-header-double {
+	margin:0px 20px 0 20px;
+	font-family: open sans, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size:28px;
+	font-weight:300;
+	line-height:30px;
+	padding-top:40px;
+}
+
 h2.page-subheader {
 	margin:0px 0 0 20px;
 	font-family: open sans, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
