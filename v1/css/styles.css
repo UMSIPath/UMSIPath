@@ -327,30 +327,6 @@ nav ul ul li a:hover {
 		color:#fff;
 	}
 	
-	
-/*** Common Section Header Styles ***/
-
-h1.page-header-single {
-	margin:0px 0 0 20px;
-	font-family: open sans, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	font-size:28px;
-	font-weight:300;
-	padding-top:55px;
-}
-
-h2.page-subheader {
-	margin:0px 0 0 20px;
-	font-family: open sans, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	font-size:24px;
-	font-weight:300;
-	padding-bottom: 20px;
-}
-
-#section-icon {
-	float: left;
-	margin: 40px 20px;
-}
-
 
 /*** Breadcrumbs Styles ***/
 .breadcrumbs-wrap {
@@ -596,6 +572,96 @@ h1.footer {
 
 
 
+
+/*** Common Section Header Styles ***/
+
+h1.section-header-single {
+	margin:0px 20px 0 20px;
+	font-family: open sans, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size:28px;
+	font-weight:300;
+	padding-top:55px;
+}
+
+h2.page-subheader {
+	margin:0px 0 0 20px;
+	font-family: open sans, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size:24px;
+	font-weight:300;
+	padding-bottom: 20px;
+}
+
+#section-icon {
+	float: left;
+	margin: 40px 20px;
+}
+
+#section-header {
+	float: left;
+	width: 60%;
+}
+
+#page-nav-btns {
+	width:30%;
+	float:right;
+}
+
+#top-btn {
+	float: right;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#top-btn a {
+	font-family: proxima-nova-bold, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	letter-spacing: 1px;
+	font-size:13px;
+	line-height:32px;
+	text-transform:uppercase;
+	color:#fff;
+	text-decoration:none;
+	float: right;
+}
+
+a.top-btn {        
+    display: block;
+    text-align: center;
+	width:135px;
+	height:34px;
+	background: #3C4B5B;
+	border-radius:17px;
+	border: none;
+}
+
+a.top-btn:hover {
+	background: #212A33;
+}
+
+#next-btn {
+	float: right;
+}
+	
+input.button {
+	width:135px;
+	height:34px;
+	padding: 0px 20px 0px 20px;
+	background: #FF4E57;
+	border-radius:17px;
+	border: none;
+	display:block;
+	cursor:pointer;
+	
+	font-family: proxima-nova-bold, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	letter-spacing: 1px;
+	font-size:13px;
+	text-transform:uppercase;
+	color:#fff;
+}
+
+.button:hover {
+  background: #BF3B41;
+}
+
 /*** Skills Styles ***/
 
 #skills-header-wrap {
@@ -610,6 +676,27 @@ h1.footer {
 	margin: 0 auto;
 	color: #BDCCD4;
 }
+
+#skills-learnmore {
+	float: right;
+	width: 30%;
+	background-color:#BDCCD4;
+	height: 145px;
+}
+
+#skills-learnmore p {
+	padding: 50px 20px 0 35px;
+}
+
+#skills-learnmore p a {
+	text-decoration: none;
+	color:#212A33 ;
+}
+
+#skills-learnmore p a:hover {
+	text-decoration:underline;
+}
+
 
 #all-skills-list {
 	padding-left: 20px;
@@ -632,11 +719,10 @@ h1.footer {
 }
 
 #skills-checklist {
-	width: 66%;
+	width: 68%;
 	float: left;
 	padding-left:20px;
 	min-height: 500px;
-	background-color:#0FF;
 	
 	column-count: 2;
 	-webkit-column-count: 2; /* Safari and Chrome */
@@ -649,6 +735,7 @@ h1.footer {
 }	
 
 
+
 /*** Checklist Styles ***/
 
 /* hide checkbox */
@@ -658,7 +745,7 @@ h1.footer {
 
 /* if checkbox is checked, then do these things */
 #checklist-form input[type="checkbox"]:checked + label {
-  color: #F15A24;
+  color: #FF4E57;
 }
 
 label {
@@ -677,48 +764,4 @@ label:hover {
   -ms-transition: color .5s ease;
   -o-transition: color .5s ease;
   transition: color .5s ease;
-}
-
-#page-nav-btns {
-	width:30%;
-	float:left;
-	background-color:#9C0;
-}
-
-#top-btn {
-	float: right;
-}
-
-#top-btn a {
-	font-family: proxima-nova-bold, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	letter-spacing: 1px;
-	font-size:13px;
-	text-transform:uppercase;
-	color:#fff;
-	text-decoration:none;
-}
-
-#next-btn {
-	float: right;
-}
-	
-input.button {
-	width:135px;
-	height:34px;
-	margin: 20px 0 0 0;
-	padding: 0px20px 0px 20px;
-	background: #FF4E57;
-	border-radius:17px;
-	border: none;
-	
-	font-family: proxima-nova-bold, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	letter-spacing: 1px;
-	font-size:13px;
-	text-transform:uppercase;
-	color:#fff;
-}
-
-.button:hover {
-  background: #F15A24;
-	color: #ddd;
 }

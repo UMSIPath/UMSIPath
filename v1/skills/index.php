@@ -11,7 +11,7 @@
     	<div id="skills-header-wrap">
         	<div id="skills-header">
             	<div id="section-icon"><img src="../static/images/skills-section-icon.png" /></div>
-            	<div id="page-header"><h1 class="page-header-single">Browse All Skills</h1></div>
+            	<div id="section-header"><h1 class="section-header-single">Browse All Skills</h1></div>
             </div>
         </div>
         

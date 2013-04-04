@@ -11,8 +11,8 @@
     	<div id="skills-header-wrap">
         	<div id="skills-header">
             	<div id="section-icon"><img src="../static/images/skills-section-icon.png" /></div>
-            	<div id="section-header"><h1 class="page-header-single">Choose skills, you must, young Skywalker.</h1></div>
-                <div id="section-learnmore"><p>Want to learn more about these skills? Check them out here.</p></div>
+            	<div id="section-header"><h1 class="section-header-single">Choose skills, you must, young Skywalker.</h1></div>
+                <div id="skills-learnmore"><p><a href="index.php">Want to learn more about these skills? Check them out here.</a></p></div>
             </div>
         </div>
         
@@ -46,7 +46,7 @@
                 </div> 
             
                 <div id="page-nav-btns">
-                    <div id="top-btn"><a href="#">Top</a></div>
+                    <div id="top-btn"><a class="top-btn" href="#">Top</a></div>
                     <div id="next-btn"><input type="submit" class="button" value="Next"></div>
                 </div>
                 </form>
