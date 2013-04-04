@@ -581,6 +581,7 @@ h1.section-header-single {
 	font-size:28px;
 	font-weight:300;
 	padding-top:55px;
+	color: #fff;
 }
 
 h1.section-header-double {
@@ -671,6 +672,79 @@ input.button {
   background: #BF3B41;
 }
 
+#browse-all-list {
+	padding-left: 20px;
+	padding-right: 20px;
+	
+	column-count: 3;
+	-webkit-column-count: 3; /* Safari and Chrome */
+	-moz-column-count: 3; /* Firefox */
+	
+	-moz-column-gap:30px; /* Firefox */
+	-webkit-column-gap:30px; /* Safari and Chrome */
+	column-gap:30px;
+}
+
+#browse-all-list p {
+	font-size:24px;
+	line-height:24pt;
+	font-weight:300;
+	color: #989898;
+}
+
+#checklist {
+	width: 68%;
+	float: left;
+	padding-left:20px;
+	min-height: 500px;
+	
+	column-count: 2;
+	-webkit-column-count: 2; /* Safari and Chrome */
+	-moz-column-count: 2; /* Firefox */
+	
+	-moz-column-gap:30px; /* Firefox */
+	-webkit-column-gap:30px; /* Safari and Chrome */
+	column-gap:30px;
+	
+}	
+
+
+/*** Careers Styles ***/
+#careers-header-wrap {
+	width: 100%;
+	height: 145px;
+	background-color:#65557C;
+}
+
+#careers-header {
+	max-width:980px;
+	height: 145px;
+	margin: 0 auto;
+	color: #65557C;
+}
+
+#careers-learnmore {
+	float: right;
+	width: 30%;
+	background-color:#847796;
+	height: 145px;
+}
+
+#careers-learnmore p {
+	padding: 50px 20px 0 35px;
+}
+
+#careers-learnmore p a {
+	text-decoration: none;
+	color:#212A33 ;
+}
+
+#careers-learnmore p a:hover {
+	text-decoration:underline;
+}
+
+
+
 /*** Skills Styles ***/
 
 #skills-header-wrap {
@@ -705,43 +779,6 @@ input.button {
 #skills-learnmore p a:hover {
 	text-decoration:underline;
 }
-
-
-#all-skills-list {
-	padding-left: 20px;
-	padding-right: 20px;
-	
-	column-count: 3;
-	-webkit-column-count: 3; /* Safari and Chrome */
-	-moz-column-count: 3; /* Firefox */
-	
-	-moz-column-gap:30px; /* Firefox */
-	-webkit-column-gap:30px; /* Safari and Chrome */
-	column-gap:30px;
-}
-
-#all-skills-list p {
-	font-size:24px;
-	line-height:24pt;
-	font-weight:300;
-	color: #989898;
-}
-
-#skills-checklist {
-	width: 68%;
-	float: left;
-	padding-left:20px;
-	min-height: 500px;
-	
-	column-count: 2;
-	-webkit-column-count: 2; /* Safari and Chrome */
-	-moz-column-count: 2; /* Firefox */
-	
-	-moz-column-gap:30px; /* Firefox */
-	-webkit-column-gap:30px; /* Safari and Chrome */
-	column-gap:30px;
-	
-}	
 
 
 

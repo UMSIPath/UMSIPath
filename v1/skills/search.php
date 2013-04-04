@@ -10,7 +10,7 @@
     <div id="main">
     	<div id="skills-header-wrap">
         	<div id="skills-header">
-            	<div id="section-icon"><img src="../static/images/skills-section-icon.png" /></div>
+            	<div id="section-icon"><img src="../static/images/section-icon-skills.png" /></div>
             	<div id="section-header"><h1 class="section-header-single">Choose skills, you must, young Skywalker.</h1></div>
                 <div id="skills-learnmore"><p><a href="index.php">Want to learn more about these skills? Check them out here.</a></p></div>
             </div>
@@ -27,7 +27,7 @@
             	<h2 class="page-subheader">Which skills are you interested in? Select all that apply.</h2>
             	
                 <form id="checklist-form" action="results.php" method="post">
-                <div id="skills-checklist">
+                <div id="checklist">
 					<?php
                     require_once "../db.php";
                     session_start();
