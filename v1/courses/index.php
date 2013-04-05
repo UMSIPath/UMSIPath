@@ -1,19 +1,44 @@
-<html>
-<head>
-<?php include '../includes/header.php'; ?>
-</head>
+<?php include('../includes/head.php'); ?>
+    <title>UMSI / Discover: Browse All Courses</title>
+    </head>
+
 
 <body>
-<?php include '../includes/menu.php'; ?>
 
-<div class="main">
-<h1>Courses Index</h1>
-<p><?php include '../includes/breadcrumbs.php'; ?></p>
-<p> Lorem Ipsum stuff... </p>
+<div id="container">
+    <?php include('../includes/navigation.php'); ?>
+    <div id="main">
+    	<div id="courses-header-wrap">
+        	<div id="courses-header" class="courses">
+            	<div id="section-icon" class="courses"><img src="../static/images/section-icon-courses.png" /></div>
+            	<div id="section-header"><h1 class="section-header-single" id="courses">Browse All Courses</h1></div>
+            </div>
+        </div>
+        
+        <div class="breadcrumbs-wrap">
+        	<div class="breadcrumbs">
+            	<h3 class="breadcrumbs"><a href="../index.php">Home</a> &ensp;<span>></span>&ensp; Browse All Courses</h3>
+            </div>
+        </div>
+        
+        <div id="content-wrap">
+        	<div id="content">
+            	<div id="browse-all-list">
+                	<p>List of all courses goes here. <br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris adipiscing hendrerit placerat. Duis dapibus nibh in turpis fermentum facilisis. In ut libero ut lacus viverra viverra. Cras sed laoreet mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam suscipit, ligula eget malesuada commodo, lorem nulla eleifend leo, id auctor felis ligula in neque. Integer elementum odio ut augue facilisis congue. Nunc dui quam, imperdiet et aliquam nec, tristique in urna. Cras at odio tortor. Donec id ligula lacinia est volutpat tempor. Nam sed nisi diam. Sed ullamcorper viverra orci, sit amet accumsan urna convallis non. In at elit et dolor dignissim fringilla.
 
-Index as in the Courses home page, not an index of courses.  That would be the courses choose page.
+Morbi eu dolor nec nibh elementum tristique. Nunc posuere laoreet mauris, quis scelerisque lectus hendrerit non. Suspendisse vestibulum felis quis nunc semper eu mollis eros laoreet. Sed dui lacus, feugiat a tincidunt mollis, dictum in neque. In dignissim porta risus, ut commodo felis tincidunt sodales. Integer egestas magna nec mi tincidunt porttitor. Quisque ut commodo libero. Mauris dictum aliquam erat, vestibulum condimentum nulla imperdiet pulvinar. In ut nisl justo, vitae pellentesque augue. Nam tortor dolor, consectetur eu placerat egestas, euismod feugiat purus. Phasellus vitae augue urna, a laoreet elit. Nunc eget dolor vitae nunc suscipit vehicula. Praesent volutpat justo a urna malesuada sit amet semper tortor sodales.</p>
+                </div> 
+            </div>        
+        </div> <!-- end content-wrap -->
+        
+        
+   	
+    </div> <!-- end main -->
+</div> <!-- end container -->
+    
+        
+<?php include('../includes/footer.php'); ?>
 
 </div>
-<?php include '../includes/footer.php'; ?>
 </body>
 </html>

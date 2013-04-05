@@ -13,7 +13,7 @@
             	<div id="section-icon"><img src="../static/images/section-icon-careers.png" /></div>
             	<div id="section-header">
             	  <h1 class="section-header-single">Choose careers, you should.</h1></div>
-                <div id="careers-learnmore">
+                <div id="learnmore" class="careers">
                   <p><a href="index.php">Want to learn more about these careers? Check them out here.</a></p></div>
             </div>
         </div>

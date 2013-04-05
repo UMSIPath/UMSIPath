@@ -26,14 +26,14 @@ Choice is yours to discover.</h1>
         
         <div id="hp-widget-wrap">
         	<div class="hp-widget">
-                <a href="#"><img src="static/images/hp-widget-skills-icon.png" alt="skills icon"/></a>
-            	<h2><a href="#">Discover by skills</a></h2>
+                <a href="skills/search.php"><img src="static/images/hp-widget-skills-icon.png" alt="skills icon"/></a>
+            	<h2><a href="skills/search.php">Discover by skills</a></h2>
                 <p>You tell us what skills you want <br>to rock, we show you what courses<br> teach those skills.</p>
             </div>
             
             <div class="hp-widget">
-                <a href="#"><img src="static/images/hp-widget-careers-icon.png" alt="careers icon"/></a>
-            	<h2><a href="#">Discover by careers</a></h2>
+                <a href="careers/search.php"><img src="static/images/hp-widget-careers-icon.png" alt="careers icon"/></a>
+            	<h2><a href="careers/search.php">Discover by careers</a></h2>
                 <p>Got a perfect job in mind?<br>Or several? We'll show you how<br>to get there.</p>
             </div>
             
