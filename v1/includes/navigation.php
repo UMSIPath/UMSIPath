@@ -39,10 +39,10 @@
                     </li>
                     <li><a href="#">Links</a>
                     	<ul>
-                        	<li><a href="#"><h1>UMSI Homepage</h1></a></li>
-                            <li><a href="#"><h1>UMSI Career Development Office</h1></a></li>
-							<li><a href="#"><h1>TAPS</h1></a></li>
-                            <li><a href="#"><h1>Wolverine Access</h1></a></li>
+                        	<li><a href="http://www.si.umich.edu" name="UMSI Homepage" target="_blank"><h1>UMSI Homepage</h1></a></li>
+                            <li><a href="http://www.si.umich.edu/careers/career-development-office" name="UMSI Career Development Office" target="_blank"><h1>UMSI Career Development Office</h1></a></li>
+							<li><a href="https://intranet.si.umich.edu/node/56" name="Tracking and Planning Sheets" target="_blank"><h1>TAPS</h1></a></li>
+                            <li><a href="https://wolverineaccess.umich.edu/render.userLayoutRootNode.uP" name="Wolverine Access" target="_blank"><h1>Wolverine Access</h1></a></li>
                     	</ul>
                     </li>
                     <li><a href="#">About</a></li>
