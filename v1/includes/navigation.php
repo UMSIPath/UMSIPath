@@ -32,9 +32,9 @@
                     </li>
                     <li><a href="#">Browse</a>
                     	<ul>
-                        	<li><a href="../courses/index.php"><h1>All Courses</h1></a></li>
+                        	<li><a href="http://localhost:8888/umsipath/v1/courses/index.php"><h1>All Courses</h1></a></li>
                         	<li><a href="http://localhost:8888/umsipath/v1/skills/index.php"><h1>All Skills</h1></a></li>
-                        	<li><a href="../careers/index.php"><h1>All Careers</h1></a></li>
+                        	<li><a href="http://localhost:8888/umsipath/v1/careers/index.php"><h1>All Careers</h1></a></li>
                         </ul>
                     </li>
                     <li><a href="#">Links</a>

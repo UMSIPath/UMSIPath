@@ -17,7 +17,7 @@
         
         <div class="breadcrumbs-wrap">
         	<div class="breadcrumbs">
-            	<h3 class="breadcrumbs"><a href="../index.php">Home</a> &ensp;<span>></span>&ensp; Browse All Courses</h3>
+            	<h3 class="breadcrumbs"><a href="../index.php">Home</a> &ensp;<span>/</span>&ensp;  All Courses &ensp;<span>/</span>&ensp;  <a href="../skills/index.php">All Skills</a> &ensp;<span>/</span>&ensp; <a href="../careers/index.php"> All Careers</a></h3>
             </div>
         </div>
         

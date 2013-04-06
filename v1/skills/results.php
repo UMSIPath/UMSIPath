@@ -18,13 +18,12 @@
         
         <div class="breadcrumbs-wrap">
         	<div class="breadcrumbs">
-            	<h3 class="breadcrumbs"><a href="../index.php">Home</a> <span>&ensp;>&ensp;</span> <a href="search.php">Choose Skills</a> <span>&ensp;>&ensp;</span> Results</h3>
+            	<h3 class="breadcrumbs"><a href="../index.php">Home</a> <span>&ensp;/&ensp;</span> <a href="search.php">Choose Skills</a> <span>&ensp;/&ensp;</span> Results</h3>
             </div>
         </div>
         
         <div id="content-wrap">
         	<div id="content">
-            	<h2 class="page-subheader">Which skills are you interested in? Select all that apply.</h2>
            		
 				
 				
