@@ -31,19 +31,38 @@ while ($row = mysql_fetch_array($result)) {
 }
 	
 # looking up associated course info
-echo "<b>Courses that teach this skill:</b>";
+echo "Courses that teach this skill:";
 foreach ($courses as $value) {
 	$result = mysql_query("SELECT * FROM courses WHERE course_id = '$value'");
 	$course = mysql_fetch_assoc($result);
 	$coursename = $course['course_title'];
 	$coursenum = $course['course_number'];
 	$coursedesc = $course['course_description'];
-	echo "<br><i>$coursenum: <a href=course.php?id=$courseid>$coursename</a></i><br>
+	echo "$coursenum: <a href=../courses/courses-info.php?id=$courseid>$coursename</a><br>
 	$coursedesc<br>";
 	}
 echo "<br>";
 
-# related careers?
+# finding associated career ID
+$result = mysql_query("SELECT career_id FROM careers_skills WHERE skill_id = '$id'");
+$careers = array();
+while ($row = mysql_fetch_array($result)) {
+	$careerid = $row['career_id'];
+	$careers[] = $careerid;
+}
+	
+# looking up associated career info
+echo "<b>Careers related to this skill:</b>";
+foreach ($careers as $value) {
+	$result = mysql_query("SELECT * FROM careers WHERE career_id = '$value'");
+	$career = mysql_fetch_assoc($result);
+	$careertitle = $career['career_title'];
+	$careerdesc = $course['career_description'];
+	echo "<br><a href=../careers/careers-info.php?id=$careerid>$careertitle</a></i><br>
+	$careerdesc";
+	}
+echo "<br>";
+
 
 
 ?>

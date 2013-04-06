@@ -40,7 +40,7 @@ foreach ($skills as $value) {
 	$result = mysql_query("SELECT * FROM skills WHERE skill_id = '$value'");
 	$skill = mysql_fetch_assoc($result);
 	$skillname = $skill['skill_name'];
-	echo "<br><a href=skill.php?id=$skillid>$skillname</a>";
+	echo "<br><a href=../skills/skills-info.php?id=$skillid>$skillname</a>";
 	
 	}
 echo "<br>";
