@@ -69,7 +69,7 @@ var coursenumber = coursedata[0]
     'data' : {number : coursenumber},
     'success' : function(data) {
       if (data == 'saved') {
-        alert('Saved');
+        $button.text('Saved');
       }
     }
   });
