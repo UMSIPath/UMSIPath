@@ -734,8 +734,31 @@ input.button {
 	width: 30%;
 	background-color:#3C4B5B;
 	margin-top:-40px;
-	padding-top: 30px;
+	padding-top: 0px;
+}
+
+#rsidebar-divider {
+	border-bottom: 1px solid #636F7C;
+	margin: 0 20px;
+}
+
+.related {
+	padding: 30px 20px;
 	color: #8A939D;
+}
+
+.related h4 {
+	font-family: proxima-nova-semibold, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	text-transform:uppercase;
+	font-size:12px;
+	margin-bottom:10px;
+}
+
+.related p {
+	color: #8A939D;
+	font-family: open sans, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	font-size:19px;
 }
 
 

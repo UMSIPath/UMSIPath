@@ -36,6 +36,8 @@ Quisque risus turpis, auctor nec vestibulum at, eleifend id sapien. Aliquam erat
                     	<p>sidebar text</p>
                      </div>
                     
+                    <div id="rsidebar-divider"></div>
+                    
                     <div class="related">
                     	<h4>Related Careers</h4>
                     	<p>textttt </p>
