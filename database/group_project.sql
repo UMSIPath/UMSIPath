@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 08, 2013 at 08:23 PM
+-- Generation Time: Apr 08, 2013 at 08:52 PM
 -- Server version: 5.5.25
 -- PHP Version: 5.4.4
 
@@ -112,7 +112,7 @@ CREATE TABLE `careers_skills` (
   PRIMARY KEY (`id`),
   KEY `career_id` (`career_id`),
   KEY `skill_id` (`skill_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `careers_skills`
@@ -125,7 +125,10 @@ INSERT INTO `careers_skills` (`id`, `career_id`, `skill_id`) VALUES
 (4, 3, 5),
 (5, 3, 4),
 (6, 4, 2),
-(7, 4, 5);
+(7, 4, 5),
+(8, 2, 34),
+(9, 2, 35),
+(10, 2, 41);
 
 -- --------------------------------------------------------
 
@@ -293,7 +296,7 @@ CREATE TABLE `courses_skills` (
   PRIMARY KEY (`id`),
   KEY `skill_id` (`skill_id`),
   KEY `course_id` (`course_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=71 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=72 ;
 
 --
 -- Dumping data for table `courses_skills`
@@ -340,7 +343,8 @@ INSERT INTO `courses_skills` (`id`, `skill_id`, `course_id`) VALUES
 (45, 42, 97),
 (46, 43, 95),
 (47, 44, 6),
-(48, 44, 48);
+(48, 44, 48),
+(71, 2, 97);
 
 -- --------------------------------------------------------
 
@@ -351,6 +355,7 @@ INSERT INTO `courses_skills` (`id`, `skill_id`, `course_id`) VALUES
 CREATE TABLE `skills` (
   `skill_id` int(10) NOT NULL AUTO_INCREMENT,
   `skill_name` varchar(128) DEFAULT NULL,
+  `skill_description` text NOT NULL,
   PRIMARY KEY (`skill_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=72 ;
 
@@ -358,51 +363,51 @@ CREATE TABLE `skills` (
 -- Dumping data for table `skills`
 --
 
-INSERT INTO `skills` (`skill_id`, `skill_name`) VALUES
-(1, 'GoldenThread'),
-(2, 'PHP'),
-(3, 'Film preservation'),
-(4, 'Sound preservation'),
-(5, 'Python'),
-(6, 'Contextual Inquiry'),
-(7, 'Team Building'),
-(8, 'Project Management'),
-(9, 'User Research'),
-(10, 'Drupal'),
-(11, 'Content Management Systems'),
-(12, 'Archives and Records Administration'),
-(13, 'Ethics'),
-(14, 'Archival Technologies'),
-(15, 'HTML'),
-(16, 'CSS'),
-(17, 'Google App Engine'),
-(18, 'User-Centered Design'),
-(19, 'Cognitive Psychology'),
-(20, 'Heuristics'),
-(21, 'Information Processing'),
-(22, 'Online Communities'),
-(23, 'Analysis of Development Projects'),
-(24, 'Choice Architecture'),
-(25, 'Information Knowledge'),
-(26, 'Adobe CS Suit'),
-(27, 'Color Theory'),
-(28, 'Wireframing'),
-(29, 'Prototyping'),
-(30, 'Sketching'),
-(31, 'Iterative Design'),
-(32, 'Axure'),
-(33, 'Design of Social Computing Sites'),
-(34, 'User Experience Research'),
-(35, 'User Experience Evaluation'),
-(36, 'Performance Analysis'),
-(37, 'System Assessment'),
-(38, 'Usability Testing'),
-(39, 'MySQL'),
-(40, 'Ajax'),
-(41, 'Javascript'),
-(42, 'Json'),
-(43, 'Data Mapping'),
-(44, 'Group Teamwork');
+INSERT INTO `skills` (`skill_id`, `skill_name`, `skill_description`) VALUES
+(1, 'GoldenThread', ''),
+(2, 'PHP', 'PHP is a programming language that provides for interactive web design.'),
+(3, 'Film preservation', 'Film preservation is a skill that is useful in archival sciences. It teaches how to preserve film for sustainable preservation in the long term.'),
+(4, 'Sound preservation', ''),
+(5, 'Python', 'Python is an introduction-level computer language. It is very good for working with text-based information.'),
+(6, 'Contextual Inquiry', 'Contextual Inquiry is a method of analysis in which communication flow is examined between a group of people.'),
+(7, 'Team Building', 'Team Building is building teams.'),
+(8, 'Project Management', ''),
+(9, 'User Research', ''),
+(10, 'Drupal', 'Drupal is a content management system that is very useful in the information sciences.'),
+(11, 'Content Management Systems', ''),
+(12, 'Archives and Records Administration', ''),
+(13, 'Ethics', ''),
+(14, 'Archival Technologies', ''),
+(15, 'HTML', ''),
+(16, 'CSS', ''),
+(17, 'Google App Engine', ''),
+(18, 'User-Centered Design', ''),
+(19, 'Cognitive Psychology', ''),
+(20, 'Heuristics', ''),
+(21, 'Information Processing', ''),
+(22, 'Online Communities', ''),
+(23, 'Analysis of Development Projects', ''),
+(24, 'Choice Architecture', ''),
+(25, 'Information Knowledge', ''),
+(26, 'Adobe CS Suite', ''),
+(27, 'Color Theory', ''),
+(28, 'Wireframing', ''),
+(29, 'Prototyping', ''),
+(30, 'Sketching', ''),
+(31, 'Iterative Design', ''),
+(32, 'Axure', ''),
+(33, 'Design of Social Computing Sites', ''),
+(34, 'User Experience Research', ''),
+(35, 'User Experience Evaluation', ''),
+(36, 'Performance Analysis', ''),
+(37, 'System Assessment', ''),
+(38, 'Usability Testing', ''),
+(39, 'MySQL', ''),
+(40, 'Ajax', ''),
+(41, 'Javascript', ''),
+(42, 'Json', ''),
+(43, 'Data Mapping', ''),
+(44, 'Group Teamwork', 'The ability to successfully work in teams is critical for information professionals. This skill helps teach communication, task management, and working with others successfully.');
 
 -- --------------------------------------------------------
 
