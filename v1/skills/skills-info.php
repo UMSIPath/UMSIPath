@@ -1,19 +1,23 @@
-<html>
-<head>
-<?php include '../includes/header.php'; ?>
-</head>
+<?php include('../includes/head.php'); ?>
+    <title>UMSI / Discover: Skills Info</title> <!-- pull in individual skill title here? -->
+    </head>
+
 
 <body>
-<?php include '../includes/menu.php'; ?>
 
-<div class="main">
-<h1>Skills Info Page</h1>
-<p><?php include '../includes/breadcrumbs.php'; ?></p>
-<p> Lorem Ipsum stuff... </p>
-
-This page will show up individual skills, found using ?id=x.
-
-</div>
-<?php include '../includes/footer.php'; ?>
-</body>
-</html>
+<div id="container">
+    <?php include('../includes/navigation.php'); ?>
+    <div id="main">
+    	<div id="skills-header-wrap">
+        	<div id="skills-header">
+            	<div id="section-icon"><img src="../static/images/section-icon-skills.png" /></div>
+            	<div id="section-header"><!--<h2 class="section-descriptor">Skill</h2>--><h1 class="section-header-single">Skill Title Here</h1></div>
+            </div>
+        </div>
+        
+        <div class="breadcrumbs-wrap">
+        	<div class="breadcrumbs">
+            	<h3 class="breadcrumbs"><a href="#">< &ensp;Back to Browse All Skills</a></h3>
+                <span class="blue"></span>
+            </div>
+        </div>
