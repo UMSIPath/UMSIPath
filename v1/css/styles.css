@@ -704,7 +704,6 @@ input.button {
 	width: 68%;
 	float: left;
 	padding-left:20px;
-	min-height: 500px;
 	
 	column-count: 2;
 	-webkit-column-count: 2; /* Safari and Chrome */
