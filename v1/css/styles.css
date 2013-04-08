@@ -351,7 +351,6 @@ nav ul ul li a:hover {
 }
 
 
-
 h3.breadcrumbs {
   font-family: proxima-nova-reg, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size:13px;
@@ -714,6 +713,30 @@ input.button {
 	column-gap:30px;
 	
 }	
+
+
+/*** Section Body Styles ***/
+.section-info {
+	float: left;
+	width: 66%;
+	padding: 0 20px 0 20px;
+}
+
+.section-info h3 {
+	font-size: 22px;
+	font-weight: 300;
+	padding-bottom: 20px;
+	line-height: 28px;
+}
+
+.section-rsidebar {
+	float: right;
+	width: 30%;
+	background-color:#3C4B5B;
+	margin-top:-40px;
+	padding-top: 30px;
+	color: #8A939D;
+}
 
 
 
