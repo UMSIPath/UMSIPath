@@ -38,7 +38,9 @@ $skills = $_POST['selectedskills'];
 
 # looping through array
 foreach ($skills as $value) {
+	# Skill: Golden Thread
 	echo "<h1><b>Skill:</b> $value</h1>";
+	
 
 # locating skill ID
 	$result = mysql_query("SELECT skill_id FROM skills WHERE skill_name = '$value'");
@@ -53,7 +55,7 @@ foreach ($skills as $value) {
 		$courses[] = $courseid;
 	}
 	
-# looking up associated course info
+# looking up associated course info 
 	echo "<b>Relevant courses:</b>";
 	foreach ($courses as $value) {
 		$result = mysql_query("SELECT * FROM courses WHERE course_id = '$value'");
