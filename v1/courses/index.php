@@ -29,7 +29,7 @@
 require_once "../db.php";
 session_start();
         	
-$result = mysql_query("SELECT * FROM courses");
+$result = mysql_query("SELECT * FROM courses ORDER BY course_number");
 	while ($row = mysql_fetch_array($result)) {
 		$coursename = $row['course_title'];
 		$coursenum = $row['course_number'];

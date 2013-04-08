@@ -29,7 +29,7 @@
 require_once "../db.php";
 session_start();
         	
-$result = mysql_query("SELECT * FROM careers");
+$result = mysql_query("SELECT * FROM careers ORDER BY career_title");
 	while ($row = mysql_fetch_array($result)) {
 		$careertitle = $row['career_title'];
 		$careerdesc = $row['career_description'];

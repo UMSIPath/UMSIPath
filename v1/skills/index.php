@@ -28,13 +28,11 @@
 require_once "../db.php";
 session_start();
         	
-$result = mysql_query("SELECT * FROM skills");
+$result = mysql_query("SELECT * FROM skills ORDER BY skill_name");
 	while ($row = mysql_fetch_array($result)) {
 		$skillname = $row['skill_name'];
-		$skilldesc = $row['skill_description'];
 		$skillid = $row['skill_id'];
-		echo "<a href=skills-info.php?id=$skillid>$skillname</a></i><br>
-		$skilldesc";
+		echo "<a href=skills-info.php?id=$skillid>$skillname</a></i><br>";
 		}
 ?>                             	
                 </div> 
