@@ -1,0 +1,81 @@
+<?php // Configuration file
+
+unset($CFG);
+global $CFG;
+$CFG = new stdClass();
+
+// Set to true to redirect to the upgrading.php script
+// Also edit the upgrading.php script with a message
+$CFG->upgrading = false;
+
+// No trailing slash on these urls
+$CFG->wwwroot = 'http://localhost:8888/umsipath';
+$CFG->staticroot = 'http://localhost:8888/umsipath';
+$CFG->analytics = false; // 'UA-423997-15';
+
+// Strings in the header and footer
+$CFG->site_owner = 'UMSI Path';
+$CFG->site_owner_page = 'http://www.si.umich.edu';
+$CFG->site_title  = 'UMSI / Discover';
+$CFG->site_title_phone = '.';
+$CFG->site_title_subtext = 'Course Navigation';
+$CFG->default_avatar = '.';
+$CFG->default_avatar_link = "https://twitter.com/umsi";
+
+// Set to false if you don't want Mozilla Badge Backpacks in the profile and map
+//$CFG->badge_display = false; // "https://backpack.openbadges.org/share";
+// Badge generation settings - once you start issuing badges - don't change these 
+//$CFG->badge_organization = 'Dr. Chuck Online';
+//$CFG->badge_encrypt_password = false; // "somethinglongwithhex387438758974987";
+//$CFG->badge_assert_salt = false; // "mediumlengthhexstring";
+
+// DEVELOPER = true changes the UI so you avoid doing the wrong thing on your production site
+$CFG->DEVELOPER = true;
+// OFFLINE = true allows for on-plane development without long timeouts
+$CFG->OFFLINE = false;
+
+// This is the gateway into the /admin area - be protective
+$CFG->adminpw = 'changeme';
+
+// Database setup
+$CFG->database  = 'group_project';
+$CFG->dbhost    = '127.0.0.1';
+$CFG->dbport    = '8889';
+$CFG->dbuser    = 'user';
+$CFG->dbpass    = 'pw';
+
+// Where the bulk mail comes from - should be a real address with a wildcard box you check
+$CFG->maildomain = 'mail.example.com';
+// Encodes the URL for the one-click unsubscribe that Google likes (see mail/maillib.php)
+$CFG->mailsecret = false; // '2f518066longstring329890348';
+$CFG->maildelay = 1;   // Number of seconds to delay between messages sent
+$CFG->maileol = "\n";  // Depends on your mailer - may need to be \r\n
+
+// This is the POP infor the the wildcard box
+$CFG->pophost = "pop.example.com";
+$CFG->poplogin = "*@mail.example.com";
+$CFG->poppw = "super-sweet-pop-password";
+
+// This supports the auto-login via long-term cookie (keep me logged in)
+$CFG->cookiesecret = '2f518066blahblahlongstring5fd09d757a289b543';
+$CFG->cookiename = 'autoumsidiscover';
+$CFG->cookiepad = '390b246ea9';
+
+// Leave this off unless you edit the footer.php code to make it your OLARK
+$CFG->OLARK_EXPERIMENTAL = false;
+
+// We use UTC-12 so a deadline works in all time zones
+date_default_timezone_set('Etc/GMT-12');
+
+// We fudge starting times forward by 24 hours so that
+// start times we publish make sense in all time zones
+function start_time() {
+    return time() + 24 * 60 * 60;
+}
+
+// This won't return as it has an exit() inside of it...
+if ( $CFG->upgrading === true ) require_once("upgrading.php");
+
+require_once("lib.php");
+
+// No trailing tag to avoid white space
