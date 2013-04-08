@@ -22,7 +22,11 @@ $result = mysql_query("SELECT * FROM courses WHERE course_id = '$id'");
 		$coursename = $course['course_title'];
 		$coursenum = $course['course_number'];
 		$coursedesc = $course['course_description'];
-		echo "<h1>$coursenum: $coursename</h1>
+		$courseunits = $course['units'];
+		$coursetype = $course['type'];
+		echo "<h1>$coursenum: $coursename</h1><br>
+		Credits: $courseunits<br>
+		Type of class: $coursetype<br>
 		$coursedesc<br>";
 			
 # finding associated skill ID
