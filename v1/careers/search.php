@@ -34,13 +34,13 @@
                     require_once "../db.php";
                     session_start();
                     
-                    $result = mysql_query("SELECT * FROM skills"); 
+                    $result = mysql_query("SELECT * FROM careers ORDER BY career_title"); 
                     
                     while($row = mysql_fetch_array($result)) 
                       { 
-                        $name = $row[skill_name];
-                        $id = $row[skill_id];
-                        echo '<input id="' . $id . '" type="checkbox" name="selectedskills[]" value="' . $name . '" ><label for="' . $id . '" >' . $name . '</label><br><br>';
+                        $name = $row[career_title];
+                        $id = $row[career_id];
+                        echo '<input id="' . $id . '" type="checkbox" name="selectedcareers[]" value="' . $name . '" ><label for="' . $id . '" >' . $name . '</label><br><br>';
                     }
                       
                     ?>
