@@ -53,9 +53,7 @@ Choice is yours to discover.</h1>
     
     </div> <!-- end container -->
     
-        
-<?php include('includes/footer.php'); ?>
+<div><?php include('includes/footer.php'); ?></div>
 
-</div>
 </body>
 </html>

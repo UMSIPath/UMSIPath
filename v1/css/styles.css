@@ -121,10 +121,11 @@ html, body, container, main {
 
 #content {
 	max-width:980px;
+	min-height:500px;
 	margin: 0 auto;
-	min-height: 600px;
 	padding-top: 40px;
 	padding-bottom: 40px;
+	overflow:auto;
 }
 
 
@@ -619,6 +620,8 @@ h2.page-subheader {
 }
 
 #page-nav-btns {
+	display: inline;
+	position: -100px;
 	width:30%;
 	float:right;
 }
@@ -699,19 +702,21 @@ input.button {
 	color: #989898;
 }
 
+
 #checklist {
 	width: 68%;
-	float: left;
 	padding-left:20px;
-	
+	float: left;
+	overflow:auto;
+		
 	column-count: 2;
 	-webkit-column-count: 2; /* Safari and Chrome */
 	-moz-column-count: 2; /* Firefox */
 	
 	-moz-column-gap:30px; /* Firefox */
 	-webkit-column-gap:30px; /* Safari and Chrome */
-	column-gap:30px;
-	
+	column-gap:30px;*/
+
 }	
 
 
