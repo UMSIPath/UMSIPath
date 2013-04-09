@@ -69,9 +69,7 @@ foreach ($careers as $value) {
 			$course = mysql_fetch_assoc($result5);
 			$coursename = $course['course_title'];
 			$coursenum = $course['course_number'];
-			$coursedesc = $course['course_description'];
-			echo "<br><i>$coursenum: <a href=../courses/courses-info.php?id=$courseid>$coursename</a></i><br>
-			Description: $coursedesc<br>";
+			echo "<br><i>$coursenum: <a href=../courses/courses-info.php?id=$courseid>$coursename</a></i>";
 			}
 		echo "<br>";
 		}
