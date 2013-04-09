@@ -11,7 +11,25 @@
     	<div id="careers-header-wrap">
         	<div id="careers-header">
             	<div id="section-icon"><img src="../static/images/section-icon-careers.png" /></div>
-            	<div id="section-header"><h2 class="section-descriptor" id="careers">Career</h2><h1 class="section-header-single" id="info">Career Title Here</h1></div>
+            	<div id="section-header"><h2 class="section-descriptor" id="careers">Career</h2><h1 class="section-header-single" id="info">
+<?php
+require_once "../db.php";
+session_start();
+
+$courses = array();
+
+# getting ID from URL
+$careerid = mysql_real_escape_string($_GET['id']);
+
+# finding name
+$result = mysql_query("SELECT * FROM careers WHERE career_id = '$careerid'");
+$career = mysql_fetch_assoc($result);
+$careername = $career['career_title'];
+$careerdesc = $career['career_description'];
+echo "$careername";
+?>
+            	
+            	</h1></div>
                 <div id="save-btn-area"><p>Save button goes here</p></div>
             </div>
         </div>
@@ -26,31 +44,44 @@
         <div id="content-wrap">
         	<div id="content">
             	<div class="section-info">
-                	<h3>Intro sentence goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi volutpat ornare augue, in vehicula est tempus eu. Sed lorem ante, mattis nec pretium dignissim, porta non mi. Pellentesque elementum turpis ut nunc mollis bibendum. Quisque convallis massa at felis blandit ornare. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sollicitudin lacus eu risus tempor varius.<br /><br />
-
-Quisque risus turpis, auctor nec vestibulum at, eleifend id sapien. Aliquam erat volutpat. Ut sollicitudin sollicitudin metus vitae suscipit. Nulla volutpat orci vitae augue mollis semper dapibus nunc imperdiet. Aliquam velit magna, porta non lobortis non, posuere sit amet nisl. Duis leo felis, tristique a cursus nec, vestibulum at lacus. Curabitur justo enim, tincidunt vitae venenatis nec, ornare et dolor. In hac habitasse platea dictumst.</p>
-            	</div>
-            	
+                	
+                	
+                </div>
                 <div class="section-rsidebar">
-                	<div class="related">
-                    	<h4>Related Courses</h4>
-                    	<ul>
-                            <li>sidebar text blhahlalhalhd a;lksdfl;as</li>
-                            <li>sidebar text blhahlalhalhd a;lksdfl;as</li>
-                            <li>sidebar text</li>
-                         </ul>
-                     </div>
-                    
-                    <div id="rsidebar-divider"></div>
-                    
                     <div class="related">
-                    	<h4>Related Skills</h4>
-                    	<ul>
-                            <li>sidebar text blhahlalhalhd a;lksdfl;as</li>
-                            <li>sidebar text blhahlalhalhd a;lksdfl;as</li>
-                            <li>sidebar text</li>
-                        </ul>
+                    	<h4>Related Skills & Courses</h4>
+<?php
+$result2 = mysql_query("SELECT skill_id FROM careers_skills WHERE career_id = '$careerid'");
+while ($row = mysql_fetch_array($result2)) {
+	$skillid = $row['skill_id'];
+	$result3 = mysql_query("SELECT * FROM skills WHERE skill_id = '$skillid'");
+	$skill = mysql_fetch_array($result3);
+	$skillname = $skill['skill_name'];
+	echo "Related skill: <a href=../skills/skill-info.php?id=$skillid>$skillname</a><br>";
+
+# finding associated course ID
+	$result4 = mysql_query("SELECT course_id FROM courses_skills WHERE skill_id = '$skillid'");
+	$courses = array();
+	while ($row = mysql_fetch_array($result4)) {
+		$courseid = $row['course_id'];
+		$courses[] = $courseid;
+	}
+	
+# looking up associated course info
+	echo "Relevant courses:<br>";
+	foreach ($courses as $value) {
+		$result5 = mysql_query("SELECT * FROM courses WHERE course_id = '$value'");
+		$course = mysql_fetch_assoc($result5);
+		$coursename = $course['course_title'];
+		$coursenum = $course['course_number'];
+		$coursedesc = $course['course_description'];
+		echo "$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a><br>";
+		}
+	echo "<br>";
+	}
+
+
+?>
                     </div>
                 </div>
 			</div><!-- end content -->        

@@ -34,7 +34,7 @@ $result = mysql_query("SELECT * FROM careers ORDER BY career_title");
 		$careertitle = $row['career_title'];
 		$careerdesc = $row['career_description'];
 		$careerid = $row['career_id'];
-		echo "<a href=careers-info.php?id=$careerid>$careertitle</a><br>";
+		echo "<a href=career-info.php?id=$careerid>$careertitle</a><br>";
 		}
 ?> 
                 	
