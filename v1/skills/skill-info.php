@@ -11,13 +11,15 @@
     	<div id="skills-header-wrap">
         	<div id="skills-header">
             	<div id="section-icon"><img src="../static/images/section-icon-skills.png" /></div>
-            	<div id="section-header"><!--<h2 class="section-descriptor">Skill</h2>--><h1 class="section-header-single">Skill Title Here</h1></div>
+            	<div id="section-header"><h2 class="section-descriptor" id="skills">Skill</h2><h1 class="section-header-single" id="info">Skill Title Here</h1></div>
+                <div id="save-btn-area"><p>Save button goes here</p></div>
             </div>
         </div>
         
         <div class="breadcrumbs-wrap">
         	<div class="breadcrumbs">
-            	<h3 class="breadcrumbs"><a href="index.php">< &ensp; Back to Browse All Skills</a></h3>
+            	<div id="breadcrumbs-nav"><h3 class="breadcrumbs"><a href="index.php">< &ensp; Back to Browse All Skills</a></h3></div>
+                <div id="breadcrumbs-blue"></div>
             </div>
         </div>
         
@@ -33,14 +35,22 @@ Quisque risus turpis, auctor nec vestibulum at, eleifend id sapien. Aliquam erat
                 <div class="section-rsidebar">
                 	<div class="related">
                     	<h4>Related Courses</h4>
-                    	<p>sidebar text</p>
+                    		<ul>
+                            	<li>sidebar text blhahlalhalhd a;lksdfl;as</li>
+                                <li>sidebar text blhahlalhalhd a;lksdfl;as</li>
+                                <li>sidebar text</li>
+                            </ul>
                      </div>
                     
                     <div id="rsidebar-divider"></div>
                     
                     <div class="related">
                     	<h4>Related Careers</h4>
-                    	<p>textttt </p>
+                    		<ul>
+                            	<li><a href="#">sidebar text</a></li>
+                                <li>sidebar text blhahlalhalhd a;lksdfl;as</li>
+                                <li>sidebar text</li>
+                            </ul>
                     </div>
                 </div>
 			</div><!-- end content -->        

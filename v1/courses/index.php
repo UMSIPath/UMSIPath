@@ -9,7 +9,7 @@
     <?php include('../includes/navigation.php'); ?>
     <div id="main">
     	<div id="courses-header-wrap">
-        	<div id="courses-header" class="courses">
+        	<div id="courses-header">
             	<div id="section-icon" class="courses"><img src="../static/images/section-icon-courses.png" /></div>
             	<div id="section-header"><h1 class="section-header-single" id="courses">Browse All Courses</h1></div>
             </div>

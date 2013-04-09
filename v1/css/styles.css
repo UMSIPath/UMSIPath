@@ -345,10 +345,23 @@ nav ul ul li a:hover {
 	max-width:980px;
 	height: 40px;
 	margin: 0px auto;
+	overflow:hidden;
+}
+
+#breadcrumbs-nav {
+	width: 70%;
+	float:left;
 }
 
 .breadcrumbs span {
 	color: #8A939D;
+}
+
+#breadcrumbs-blue {
+	float: right;
+	width: 30%;
+	background:#3C4B5B;
+	height:40px;
 }
 
 
@@ -358,6 +371,7 @@ h3.breadcrumbs {
   color: #212A33;
   padding: 13px 0 0 20px;
 }
+
 
 h3.breadcrumbs a {
 	text-decoration:none;
@@ -490,7 +504,7 @@ footer#top {
 }
 
 .footer-widget {
-	width:33%;
+	width:32%;
 	float: left;
 	padding: 60px 20px 60px 20px;
 }
@@ -601,12 +615,54 @@ h1.section-header-double {
 	color: #E5E5E5;
 }
 
+h1.section-header-single#info {
+	margin:0px 20px 0 20px;
+	font-family: open sans, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size:28px;
+	font-weight:300;
+	padding-top:10px;
+	color: #E5E5E5;
+}
+
+h1.section-header-single#courses-info {
+	margin:0px 20px 0 20px;
+	font-family: open sans, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size:28px;
+	font-weight:300;
+	padding-top:10px;
+	color: #212A33;
+}
+
+
 h2.page-subheader {
 	margin:0px 0 0 20px;
 	font-family: open sans, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size:24px;
 	font-weight:300;
 	padding-bottom: 20px;
+}
+
+h2.section-descriptor#skills {
+	font-family: proxima-nova-semibold, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	margin: 40px 0 0px 20px;
+	font-size: 13px;
+	text-transform:uppercase;
+}
+
+h2.section-descriptor#courses {
+	font-family: proxima-nova-semibold, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	margin: 40px 0 0px 20px;
+	font-size: 13px;
+	text-transform:uppercase;
+	color: #212A33;
+}
+
+h2.section-descriptor#careers {
+	font-family: proxima-nova-semibold, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	text-transform:uppercase;
+	margin: 40px 0 0px 20px;
+	font-size: 13px;
+	color: #e5e5e5;
 }
 
 #section-icon {
@@ -619,9 +675,20 @@ h2.page-subheader {
 	width: 60%;
 }
 
+#save-btn-area {
+	float: right;
+	width: 30%;
+	background-color:#2C3844;
+	height: 145px;
+	text-align:center;
+}
+
+#save-btn-area p {
+	color: #fff;
+	padding-top: 50px;
+}
+
 #page-nav-btns {
-	display: inline;
-	position: -100px;
 	width:30%;
 	float:right;
 }
@@ -630,6 +697,7 @@ h2.page-subheader {
 	float: right;
 	width: 100%;
 	margin-bottom: 10px;
+	margin-left: 400px;
 }
 
 #top-btn a {
@@ -681,6 +749,8 @@ input.button {
 .button:hover {
   background: #BF3B41;
 }
+
+/*** ***/
 
 #browse-all-list {
 	padding-left: 20px;
@@ -734,13 +804,19 @@ input.button {
 	line-height: 28px;
 }
 
+
+
+/*** Section Right Sidebar ***/
 .section-rsidebar {
 	float: right;
+	min-height: 600px; /* how to match content height? */
 	width: 30%;
 	background-color:#3C4B5B;
 	margin-top:-40px;
+	margin-bottom: -40px;
 	padding-top: 0px;
 }
+
 
 #rsidebar-divider {
 	border-bottom: 1px solid #636F7C;
@@ -759,12 +835,23 @@ input.button {
 	margin-bottom:10px;
 }
 
-.related p {
+.related li {
 	color: #8A939D;
 	font-family: open sans, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-weight: 300;
 	font-size:19px;
+	margin-top: 15px;
 }
+
+.related li a {
+	text-decoration: none;
+	color: #8A939D;
+}
+
+.related li a:hover{
+	color: #fff;
+}
+
 
 
 
@@ -775,11 +862,12 @@ input.button {
 	background-color:#A7CFD8;
 }
 
-#courses-header.courses {
+#courses-header {
 	max-width:980px;
 	height: 145px;
 	margin: 0 auto;
 	color: #A7CFD8;
+	overflow:hidden;
 }
 
 #section-icon.courses {
