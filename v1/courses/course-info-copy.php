@@ -1,3 +1,28 @@
+<?php include('../includes/head.php'); ?>
+    <title>UMSI / Discover: Skills Info</title> <!-- pull in individual skill title here? -->
+    </head>
+
+
+<body>
+
+<div id="container">
+    <?php include('../includes/navigation.php'); ?>
+    <div id="main">
+    	<div id="courses-header-wrap">
+        	<div id="courses-header">
+            	<div id="section-icon" class="courses"><img src="../static/images/section-icon-courses.png" /></div>
+            	<div id="section-header"><h2 class="section-descriptor" id="courses">Course</h2><h1 class="section-header-single" id="courses-info">Course Title Here</h1></div>
+                <div id="save-btn-area"><p>Save button goes here</p></div>
+            </div>
+        </div>
+        
+        <div class="breadcrumbs-wrap">
+        	<div class="breadcrumbs">
+            	<div id="breadcrumbs-nav"><h3 class="breadcrumbs"><a href="index.php">< &ensp; Back to Browse All Courses</a></h3></div>
+                <div id="breadcrumbs-blue"></div>
+            </div>
+        </div>
+        
         <div id="content-wrap">
         	<div id="content">
             	<div class="section-info">
@@ -32,3 +57,12 @@ Quisque risus turpis, auctor nec vestibulum at, eleifend id sapien. Aliquam erat
         
         
         </div><!-- end content-wrap -->
+        
+    </div><!-- end main -->
+</div><!-- end container -->
+
+<?php include('../includes/footer.php'); ?>
+
+</div>
+</body>
+</html>
