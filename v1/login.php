@@ -146,6 +146,13 @@ if ( $doLogin ) {
         return;
     }
 }
+
+//$mysqlquery=query the databse
+//if ($mysqlquery==false) {
+//$mysqlenter = INSERT into student                     //(firstname,lastname,username) VALUES
+//($firstName, $lastName, $userEmail);
+//mysql_query($mysqlenter);
+//}
 ?>
 
 <?php include('includes/head.php'); ?>

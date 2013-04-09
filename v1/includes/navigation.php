@@ -7,8 +7,20 @@
                         
             <div id="metanav">
             	<ul class="metanav">
-                	<li><a href="#">Howdy, Stranger</a></li>
-                    <li><a href="login.php">Login</a></li>
+<?php if ( isset( $_SESSION["id"]) ) { ?>
+<li><a href="account/index.php">Howdy, <?php echo($_SESSION["first"]) ?> </a></li>
+<?php } else { ?>
+<li><a href="login.php">Howdy, Stranger</a></li>
+<? } ?>
+                	
+                	
+<?php if ( isset( $_SESSION["id"]) ) { ?>
+<li><a href="logout.php">Logout</a></li>
+<?php } else { ?>
+<li><a href="login.php">Login</a></li>
+<? } ?>
+                    
+                    
                 </ul>
             </div>
             
