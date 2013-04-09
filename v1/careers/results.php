@@ -52,7 +52,7 @@ foreach ($careers as $value) {
 		$result3 = mysql_query("SELECT * FROM skills WHERE skill_id = '$skillid'");
 		$skill = mysql_fetch_array($result3);
 		$skillname = $skill['skill_name'];
-		echo "<br>Required skill:  <a href=../skills/skills-info.php?id=$skillid>$skillname</a><br>";
+		echo "<br>Required skill:  <a href=../skills/skill-info.php?id=$skillid>$skillname</a><br>";
 
 # finding associated course ID
 		$result4 = mysql_query("SELECT course_id FROM courses_skills WHERE skill_id = '$skillid'");
@@ -69,7 +69,7 @@ foreach ($careers as $value) {
 			$course = mysql_fetch_assoc($result5);
 			$coursename = $course['course_title'];
 			$coursenum = $course['course_number'];
-			echo "<br><i>$coursenum: <a href=../courses/courses-info.php?id=$courseid>$coursename</a></i>";
+			echo "<br><i>$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a></i>";
 			}
 		echo "<br>";
 		}
@@ -85,7 +85,7 @@ else {
 		$coursenum = $row['course_number'];
 		$coursedesc = $row['course_description'];
 		$courseid = $row['course_id'];
-		echo "<br><i>$coursenum: <a href=../courses/courses-info.php?id=$courseid>$coursename</a></i><br>
+		echo "<br><i>$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a></i><br>
 		$coursedesc<br>";
 		}
 }
