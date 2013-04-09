@@ -1,5 +1,5 @@
 <?php include('../includes/head.php'); ?>
-    <title>UMSI / Discover: Skills Info</title> <!-- pull in individual skill title here? -->
+    <title>UMSI / Discover: Career Info</title> <!-- pull in individual career title here? -->
     </head>
 
 

@@ -9,15 +9,15 @@
     <?php include('../includes/navigation.php'); ?>
     <div id="main">
 
-        <?php include('course-info-header.php'); ?>
+        <?php include('../courses/course-info-header.php'); ?>
         <div class="breadcrumbs-wrap">
         	<div class="breadcrumbs">
-            	<div id="breadcrumbs-nav"><h3 class="breadcrumbs"><a href="index.php">< &ensp; Back to Browse All Courses</a></h3></div>
+            	<div id="breadcrumbs-nav"><h3 class="breadcrumbs"><a href="results.php">< &ensp; Back to Results</a></h3></div>
                 <div id="breadcrumbs-blue"></div>
             </div>
         </div>
         
-        <?php include('course-info-body.php'); ?>
+        <?php include('../courses/course-info-body.php'); ?>
     </div><!-- end main -->
 </div><!-- end container -->
 
