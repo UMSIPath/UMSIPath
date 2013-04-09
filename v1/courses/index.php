@@ -35,7 +35,7 @@ $result = mysql_query("SELECT * FROM courses ORDER BY course_number");
 		$coursenum = $row['course_number'];
 		$coursedesc = $row['course_description'];
 		$courseid = $row['course_id'];
-		echo "$coursenum: <a href=courses-info.php?id=$courseid>$coursename</a><br>";
+		echo "$coursenum: <a href=course-info.php?id=$courseid>$coursename</a><br>";
 		}
 ?> 
                 	
