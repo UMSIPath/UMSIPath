@@ -32,7 +32,7 @@ $result = mysql_query("SELECT * FROM skills ORDER BY skill_name");
 	while ($row = mysql_fetch_array($result)) {
 		$skillname = $row['skill_name'];
 		$skillid = $row['skill_id'];
-		echo "<a href=skills-info.php?id=$skillid>$skillname</a></i><br>";
+		echo "<a href=skill-info.php?id=$skillid>$skillname</a></i><br>";
 		}
 ?>                             	
                 </div> 

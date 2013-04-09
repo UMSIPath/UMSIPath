@@ -62,7 +62,7 @@ foreach ($skills as $value) {
 		$course = mysql_fetch_assoc($result);
 		$coursename = $course['course_title'];
 		$coursenum = $course['course_number'];
-		echo "<br><i>$coursenum: <a href=../courses/courses-info.php?id=$courseid>$coursename</a></i>";
+		echo "<br><i>$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a></i>";
 		}
 	echo "<br>";
 }
@@ -76,7 +76,7 @@ else {
 		$coursenum = $row['course_number'];
 		$coursedesc = $row['course_description'];
 		$courseid = $row['course_id'];
-		echo "<br><i>$coursenum: <a href=../courses/courses-info.php?id=$courseid>$coursename</a></i><br>
+		echo "<br><i>$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a></i><br>
 		$coursedesc<br>";
 		}
 }
