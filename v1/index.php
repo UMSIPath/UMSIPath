@@ -24,6 +24,7 @@ Choice is yours to discover.</h1>
             </div>
         </div>
         
+        <div id="hp-widget-wrapper">
         <div id="hp-widget-wrap">
         	<div class="hp-widget">
                 <a href="skills/search.php"><img src="static/images/hp-widget-skills-icon.png" alt="skills icon"/></a>
@@ -42,6 +43,7 @@ Choice is yours to discover.</h1>
             	<h2><a href="#">Find someone like me</a></h2>
                 <p>Not sure where to start? We'll find an<br> alumni similar to your background so<br> you can check them out.</p>
             </div>
+        </div>
         </div>
         
         <div id="hp-mission-wrap">

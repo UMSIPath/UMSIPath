@@ -428,19 +428,30 @@ h2.hp-intro a {
 }
 
 
+#hp-widget-wrapper {
+	margin: 10px 0 10px 0;
+	width:100%;
+	background-color:#F7F9FB;
+}
+
 #hp-widget-wrap {
 	max-width:980px;
 	margin: 0 auto;
 	height: 365px;
 	background-color: #fff;
+	overflow:auto;
 }
 
 .hp-widget {
-	width: 33.33%;
+	display:block;
+	width: 32%;
 	height: 365px;
-	background-color: #fff;
+	background-color: #F7F9FB;
+	margin-left: 10px;
+	border-radius: 5px;
 	float: left;
 	text-align:center;
+	overflow:auto;
 }
 
 .hp-widget h2 {
@@ -463,7 +474,6 @@ h2.hp-intro a {
 	width: 100%;
 	height: auto;
 	background-color:#f1f1f1;
-	border-top: 1px solid #e5e5e5;
 }
 
 #hp-mission {
@@ -783,7 +793,7 @@ ul.browseall li a:visited {
 }
 
 ul.browseall li a:hover {
-	color: #2C3844;
+	color: #004B8D;
 	
 	  /* transitions and animations */
   -webkit-transition: color .2s ease;
@@ -794,18 +804,19 @@ ul.browseall li a:hover {
 }
 
 ul.browseall#courses li a {
-	font-size: 16px;
+	font-size: 17px;
 	text-decoration: none;
 	color: #3CAFCE;
+	font-weight:300;
 	line-height:20px;
 }
 
 ul.browseall#courses li a:visited {
-	color: #cdcdcd;
+	color: #ccc;
 }
 
 ul.browseall#courses li a:hover {
-	color: #2C3844;
+	color: #004B8D;
 	
 	  /* transitions and animations */
   -webkit-transition: color .2s ease;
