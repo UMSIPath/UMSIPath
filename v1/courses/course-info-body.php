@@ -1,6 +1,7 @@
         <div id="content-wrap">
         	<div id="content">
             	<div class="section-info">
+                
 <?php
 require_once "../db.php";
 session_start();
@@ -12,7 +13,8 @@ $id = mysql_real_escape_string($_GET['id']);
 $result = mysql_query("SELECT * FROM courses WHERE course_id = '$id'");
 		$course = mysql_fetch_assoc($result);
 		$coursedesc = $course['course_description'];
-		echo "$coursedesc";
+		echo "<h3>About SI $coursenum:</h3>";
+		echo "<p>$coursedesc</p>";
 ?>                
                 </div>
             	
@@ -55,11 +57,27 @@ foreach ($skills as $value) {
 
 	}
 ?>                
+<<<<<<< HEAD
             
             
             
                 </div>
             	</div>
+=======
+                	</div>
+                    
+                     <div id="rsidebar-divider"></div>
+                    
+                    <div class="related">
+                    	<h4>Related Careers</h4>
+                    	<ul>
+                            <li>sidebar text blhahlalhalhd a;lksdfl;as</li>
+                            <li>sidebar text blhahlalhalhd a;lksdfl;as</li>
+                            <li>sidebar text</li>
+                        </ul>
+                    </div>
+            	</div><!-- end section-rsidebar -->
+>>>>>>> stylin' things
             
 			</div><!-- end content -->        
         

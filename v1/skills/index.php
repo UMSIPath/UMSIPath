@@ -24,6 +24,7 @@
         <div id="content-wrap">
         	<div id="content">
             	<div id="browse-all-list">
+                	<ul class="browseall">
 <?php
 require_once "../db.php";
 session_start();
@@ -32,9 +33,10 @@ $result = mysql_query("SELECT * FROM skills ORDER BY skill_name");
 	while ($row = mysql_fetch_array($result)) {
 		$skillname = $row['skill_name'];
 		$skillid = $row['skill_id'];
-		echo "<a href=skill-info.php?id=$skillid>$skillname</a></i><br>";
+		echo "<li><a href=skill-info.php?id=$skillid>$skillname</a></i></li>";
 		}
-?>                             	
+?>                 
+					</ul>            	
                 </div> 
             </div>        
         </div> <!-- end content-wrap -->

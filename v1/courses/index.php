@@ -24,7 +24,7 @@
         <div id="content-wrap">
         	<div id="content">
             	<div id="browse-all-list">
-                
+                	<ul class="browseall" id="courses">
 <?php
 require_once "../db.php";
 session_start();
@@ -35,10 +35,10 @@ $result = mysql_query("SELECT * FROM courses ORDER BY course_number");
 		$coursenum = $row['course_number'];
 		$coursedesc = $row['course_description'];
 		$courseid = $row['course_id'];
-		echo "$coursenum: <a href=course-info.php?id=$courseid>$coursename</a><br>";
+		echo "<li><span class='coursenum-label'>SI $coursenum</span> <span class='course-name'><a href='course-info.php?id=$courseid'> $coursename</a></span></li>";
 		}
 ?> 
-                	
+   					</ul>             	
                 </div> 
             </div>        
         </div> <!-- end content-wrap -->

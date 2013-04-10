@@ -751,7 +751,7 @@ input.button {
   background: #BF3B41;
 }
 
-/*** ***/
+/*** Browse styles ***/
 
 #browse-all-list {
 	padding-left: 20px;
@@ -764,31 +764,75 @@ input.button {
 	-moz-column-gap:30px; /* Firefox */
 	-webkit-column-gap:30px; /* Safari and Chrome */
 	column-gap:30px;
+	widows:inherit;
 }
 
-#browse-all-list p {
-	font-size:24px;
-	line-height:24pt;
-	font-weight:300;
-	color: #989898;
+ul.browseall li {
+	margin-bottom: 12px;
 }
 
+ul.browseall li a {
+	font-size: 18px;
+	text-decoration: none;
+	color: #3CAFCE;
+	line-height:20px;
+}
 
-#checklist {
-	width: 67%;
-	padding-left:20px;
-	float: left;
-	overflow:auto;
-		
-	column-count: 2;
-	-webkit-column-count: 2; /* Safari and Chrome */
-	-moz-column-count: 2; /* Firefox */
+ul.browseall li a:visited {
+	color: #ccc;
+}
+
+ul.browseall li a:hover {
+	color: #2C3844;
 	
-	-moz-column-gap:30px; /* Firefox */
-	-webkit-column-gap:30px; /* Safari and Chrome */
-	column-gap:30px;*/
+	  /* transitions and animations */
+  -webkit-transition: color .2s ease;
+  -moz-transition: color .2s ease;
+  -ms-transition: color .2s ease;
+  -o-transition: color .2s ease;
+  transition: color .2s ease;
+}
 
-}	
+ul.browseall#courses li a {
+	font-size: 16px;
+	text-decoration: none;
+	color: #3CAFCE;
+	line-height:20px;
+}
+
+ul.browseall#courses li a:visited {
+	color: #cdcdcd;
+}
+
+ul.browseall#courses li a:hover {
+	color: #2C3844;
+	
+	  /* transitions and animations */
+  -webkit-transition: color .2s ease;
+  -moz-transition: color .2s ease;
+  -ms-transition: color .2s ease;
+  -o-transition: color .2s ease;
+  transition: color .2s ease;
+}
+
+/* Course Number labels */
+span.coursenum-label {
+	font-family: proxima-nova-reg;
+	font-size:12px;
+	color: #2C3844;
+	font-weight: normal;
+	display: inline-block;
+    padding-left: 5px;
+	line-height:7px;
+}
+ /* course name indent */
+span.course-name{	
+	display: inline-block;
+    padding-left: 5px;
+    text-indent: 0px;
+    vertical-align: top;
+     width: 78%; } 
+
 
 
 /*** Section Body Styles ***/
@@ -962,6 +1006,22 @@ h1.section-header-single#courses {
 
 /*** Checklist Styles ***/
 
+#checklist {
+	width: 67%;
+	padding-left:20px;
+	float: left;
+	overflow:auto;
+		
+	column-count: 2;
+	-webkit-column-count: 2; /* Safari and Chrome */
+	-moz-column-count: 2; /* Firefox */
+	
+	-moz-column-gap:30px; /* Firefox */
+	-webkit-column-gap:30px; /* Safari and Chrome */
+	column-gap:30px;*/
+
+}	
+
 /* hide checkbox */
 #checklist-form input[type="checkbox"] {
   display: none;
@@ -973,9 +1033,10 @@ h1.section-header-single#courses {
 }
 
 label {
-	font-size: 22px;
+	font-size: 20px;
+	line-height:23px;
 	font-weight: 300;
-	color: #989898;
+	color: #cdcdcd;
 }
 /* styles when hovering over options */
 label:hover {
@@ -983,9 +1044,9 @@ label:hover {
   cursor: pointer;
   
   /* transitions and animations */
-  -webkit-transition: color .5s ease;
-  -moz-transition: color .5s ease;
-  -ms-transition: color .5s ease;
-  -o-transition: color .5s ease;
-  transition: color .5s ease;
+  -webkit-transition: color .2s ease;
+  -moz-transition: color .2s ease;
+  -ms-transition: color .2s ease;
+  -o-transition: color .2s ease;
+  transition: color .2s ease;
 }

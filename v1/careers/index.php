@@ -24,7 +24,7 @@
         <div id="content-wrap">
         	<div id="content">
             	<div id="browse-all-list">
-                
+                	<ul class="browseall">
 <?php
 require_once "../db.php";
 session_start();
@@ -34,10 +34,10 @@ $result = mysql_query("SELECT * FROM careers ORDER BY career_title");
 		$careertitle = $row['career_title'];
 		$careerdesc = $row['career_description'];
 		$careerid = $row['career_id'];
-		echo "<a href=career-info.php?id=$careerid>$careertitle</a><br>";
+		echo "<li><a href=career-info.php?id=$careerid>$careertitle</a></li>";
 		}
 ?> 
-                	
+                	</ul>	
                 </div> 
             </div>        
         </div> <!-- end content-wrap -->
