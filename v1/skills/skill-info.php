@@ -49,7 +49,7 @@ echo "$skillname";
             	<div class="section-info">
 <?php
 # getting attributes of skill
-echo "Description:<br>$skilldesc";
+echo "$skilldesc";
 		
 # finding associated course ID
 $result = mysql_query("SELECT course_id FROM courses_skills WHERE skill_id = '$id'");
@@ -65,14 +65,16 @@ while ($row = mysql_fetch_array($result)) {
                 	<div class="related">
                     	<h4>Related Courses</h4>
 <?php
-    foreach ($courses as $value) {
+echo "<ul>";
+foreach ($courses as $value) {
 	$result = mysql_query("SELECT * FROM courses WHERE course_id = '$value'");
 	$course = mysql_fetch_assoc($result);
 	$coursename = $course['course_title'];
 	$coursenum = $course['course_number'];
 	$coursedesc = $course['course_description'];
-	echo "$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a><br>";
+	echo "<li>$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a><br></li>";
 	}
+echo "</ul>";
 ?>
                      </div>
                     
@@ -90,14 +92,14 @@ while ($row = mysql_fetch_array($result)) {
 }
 
 # looking up associated career info
+echo "<ul>";
 foreach ($careers as $value) {
 	$result = mysql_query("SELECT * FROM careers WHERE career_id = '$value'");
 	$career = mysql_fetch_assoc($result);
 	$careertitle = $career['career_title'];
-	$careerdesc = $course['career_description'];
-	echo "<br><a href=../careers/career-info.php?id=$careerid>$careertitle</a></i><br>
-	$careerdesc";
+	echo "<li><a href=../careers/career-info.php?id=$careerid>$careertitle</a></li>";
 }
+echo "</ul>";
 ?>
                     </div>
                 </div>
