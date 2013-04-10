@@ -793,8 +793,7 @@ ul.browseall li a:visited {
 }
 
 ul.browseall li a:hover {
-	color: #000;
-	font-weight:normal;
+	color: #4ED4F4;
 	  /* transitions and animations */
   -webkit-transition: color .2s ease;
   -moz-transition: color .2s ease;
@@ -817,11 +816,11 @@ ul.browseall#courses li a {
 }
 
 ul.browseall#courses li a:visited {
-	color: #ccc;
+	color: #bbb;
 }
 
 ul.browseall#courses li a:hover {
-	color: #000;
+	color: #4ED4F4;
 	
 	  /* transitions and animations */
   -webkit-transition: color .2s ease;
