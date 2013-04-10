@@ -53,31 +53,15 @@ foreach ($skills as $value) {
 		$careertitle = $career['career_title'];
 		echo "<li><a href=../careers/career-info.php?id=$careerid>$careertitle</a></li>";
 	}
-	echo "</div><div id=\"rsidebar-divider\"></div><div class=\"related\">";
+	echo "</div><div id='rsidebar-divider'></div><div class='related'>";
 
 	}
 ?>                
-<<<<<<< HEAD
-            
             
             
                 </div>
-            	</div>
-=======
-                	</div>
-                    
-                     <div id="rsidebar-divider"></div>
-                    
-                    <div class="related">
-                    	<h4>Related Careers</h4>
-                    	<ul>
-                            <li>sidebar text blhahlalhalhd a;lksdfl;as</li>
-                            <li>sidebar text blhahlalhalhd a;lksdfl;as</li>
-                            <li>sidebar text</li>
-                        </ul>
-                    </div>
+            	
             	</div><!-- end section-rsidebar -->
->>>>>>> stylin' things
             
 			</div><!-- end content -->        
         
