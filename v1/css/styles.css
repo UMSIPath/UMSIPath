@@ -784,7 +784,7 @@ ul.browseall li {
 ul.browseall li a {
 	font-size: 18px;
 	text-decoration: none;
-	color: #3CAFCE;
+	color: #3697AD;
 	line-height:20px;
 }
 
@@ -793,8 +793,8 @@ ul.browseall li a:visited {
 }
 
 ul.browseall li a:hover {
-	color: #004B8D;
-	
+	color: #000;
+	font-weight:normal;
 	  /* transitions and animations */
   -webkit-transition: color .2s ease;
   -moz-transition: color .2s ease;
@@ -803,12 +803,17 @@ ul.browseall li a:hover {
   transition: color .2s ease;
 }
 
+
+ul.browseall#courses li {
+	margin-bottom: 18px;
+}
+
 ul.browseall#courses li a {
 	font-size: 17px;
 	text-decoration: none;
-	color: #3CAFCE;
+	color: #3697AD;
 	font-weight:300;
-	line-height:20px;
+	line-height:19px;
 }
 
 ul.browseall#courses li a:visited {
@@ -816,7 +821,7 @@ ul.browseall#courses li a:visited {
 }
 
 ul.browseall#courses li a:hover {
-	color: #004B8D;
+	color: #000;
 	
 	  /* transitions and animations */
   -webkit-transition: color .2s ease;
@@ -830,7 +835,7 @@ ul.browseall#courses li a:hover {
 span.coursenum-label {
 	font-family: proxima-nova-reg;
 	font-size:12px;
-	color: #666;
+	color: #333;
 	font-weight: normal;
 	display: inline-block;
     padding-left: 5px;
@@ -1048,6 +1053,7 @@ label {
 	line-height:23px;
 	font-weight: 300;
 	color: #cdcdcd;
+	margin-top:15px;
 }
 /* styles when hovering over options */
 label:hover {
