@@ -816,7 +816,7 @@ ul.browseall#courses li a {
 }
 
 ul.browseall#courses li a:visited {
-	color: #bbb;
+	color: #999;
 }
 
 ul.browseall#courses li a:hover {
@@ -1051,7 +1051,7 @@ label {
 	font-size: 20px;
 	line-height:23px;
 	font-weight: 300;
-	color: #cdcdcd;
+	color: #999;
 	margin-top:15px;
 }
 /* styles when hovering over options */
