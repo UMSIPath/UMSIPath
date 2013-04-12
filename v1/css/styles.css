@@ -816,11 +816,12 @@ ul.browseall#courses li a {
 }
 
 ul.browseall#courses li a:visited {
-	color: #999;
+	color: #ccc;
 }
 
 ul.browseall#courses li a:hover {
 	color: #4ED4F4;
+
 	
 	  /* transitions and animations */
   -webkit-transition: color .2s ease;
