@@ -63,13 +63,13 @@ foreach ($careers as $value) {
 		}
 	
 # looking up associated course info
-		echo "<b>Relevant courses:</b>";
+		echo "<b>Relevant courses:<br></b>";
 		foreach ($courses as $value) {
 			$result5 = mysql_query("SELECT * FROM courses WHERE course_id = '$value'");
 			$course = mysql_fetch_assoc($result5);
 			$coursename = $course['course_title'];
 			$coursenum = $course['course_number'];
-			echo "<br><i>$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a></i>";
+			echo "<i>$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a></i>";
 			}
 		echo "<br>";
 		}

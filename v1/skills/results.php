@@ -64,7 +64,7 @@ foreach ($skills as $value) {
 		$coursenum = $course['course_number'];
 		echo "<br><i>$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a></i>";
 		}
-	echo "<br>";
+	echo "<br><br>";
 }
 }
 
@@ -76,8 +76,7 @@ else {
 		$coursenum = $row['course_number'];
 		$coursedesc = $row['course_description'];
 		$courseid = $row['course_id'];
-		echo "<br><i>$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a></i><br>
-		$coursedesc<br>";
+		echo "<br><i>$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a></i><br>";
 		}
 }
 

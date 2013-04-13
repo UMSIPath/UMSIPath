@@ -21,39 +21,35 @@ $result = mysql_query("SELECT * FROM courses WHERE course_id = '$id'");
                 <div class="section-rsidebar">
                 	<div class="related">
                     	<h4>Related Skills & Careers</h4>
-                        	<ul>
 <?php
-$result = mysql_query("SELECT skill_id FROM courses_skills WHERE course_id = '$id'");
-$skills = array();
-while ($row = mysql_fetch_array($result)) {
+$result2 = mysql_query("SELECT skill_id FROM courses_skills WHERE course_id = '$id'");
+while ($row = mysql_fetch_array($result2)) {
 	$skillid = $row['skill_id'];
-	$skills[] = $skillid;
-	}
-	
-# looking up associated skill info
-foreach ($skills as $value) {
-	$result = mysql_query("SELECT * FROM skills WHERE skill_id = '$value'");
-	$skill = mysql_fetch_assoc($result);
+	$result3 = mysql_query("SELECT * FROM skills WHERE skill_id = '$skillid'");
+	$skill = mysql_fetch_array($result3);
 	$skillname = $skill['skill_name'];
-	$skillid = $skill['skill_id'];
-	echo "<li><a href=../skills/skill-info.php?id=$skillid>$skillname</a></li></ul></div><div id='rsidebar-divider'></div>";
-	
-	$result2 = mysql_query("SELECT career_id FROM careers_skills WHERE skill_id = '$skillid'");
+	echo "<ul><li>Skill: <a href=../skills/skill-info.php?id=$skillid>$skillname</a></li></ul>";
+
+# finding associated career ID
+	$result4 = mysql_query("SELECT career_id FROM careers_skills WHERE skill_id = '$skillid'");
 	$careers = array();
-	while ($row = mysql_fetch_array($result2)) {
+	while ($row = mysql_fetch_array($result4)) {
 		$careerid = $row['career_id'];
 		$careers[] = $careerid;
-		}
-
-# looking up associated career info
-	echo "<div class='related'><h4><br>Careers:</h4><ul>";
-	foreach ($careers as $value) {
-		$result = mysql_query("SELECT * FROM careers WHERE career_id = '$value'");
-		$career = mysql_fetch_assoc($result);
-		$careertitle = $career['career_title'];
-		echo "<li><a href=../careers/career-info.php?id=$careerid>$careertitle</a></li>";
 	}
 
+
+# looking up associated career info
+	echo "<ul>";
+	foreach ($careers as $value) {
+		$result5 = mysql_query("SELECT * FROM careers WHERE career_id = '$value'");
+		$career = mysql_fetch_assoc($result5);
+		$careername = $career['career_title'];
+		$careerdesc = $career['career_description'];
+		echo "<li><a href=../careers/career-info.php?id=$careerid>$careername</a></li>";
+		}
+	echo "</ul>";
+	echo "</div><div id=\"rsidebar-divider\"></div><div class=\"related\">";
 	}
 ?>                
             
