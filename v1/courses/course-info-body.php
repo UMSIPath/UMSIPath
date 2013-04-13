@@ -19,6 +19,11 @@ $result = mysql_query("SELECT * FROM courses WHERE course_id = '$id'");
 		echo "<h3>Credits: $credits</h3>";
 		echo "<h3>Type: $type";
 
+if ($syllabus == '') {
+    echo "<h3>No syllabus available</h3>";
+} 
+else { echo "<h3>Syllabus: <a href=$syllabus>download</a></h3>";}
+
 		echo "<h3>About SI $coursenum:</h3>";
 		echo "<p>$coursedesc</p>";
 ?>                
