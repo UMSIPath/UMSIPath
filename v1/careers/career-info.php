@@ -44,7 +44,9 @@ echo "$careername";
         <div id="content-wrap">
         	<div id="content">
             	<div class="section-info">
-                	
+                	<?php
+                	echo "$careerdesc";
+                	?>
                 	
                 </div>
                 <div class="section-rsidebar">
