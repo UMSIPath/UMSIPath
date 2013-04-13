@@ -13,6 +13,12 @@ $id = mysql_real_escape_string($_GET['id']);
 $result = mysql_query("SELECT * FROM courses WHERE course_id = '$id'");
 		$course = mysql_fetch_assoc($result);
 		$coursedesc = $course['course_description'];
+		$credits = $course['units'];
+		$syllabus = $course['syllabus'];
+		$type = $course['type'];
+		echo "<h3>Credits: $credits</h3>";
+		echo "<h3>Type: $type";
+
 		echo "<h3>About SI $coursenum:</h3>";
 		echo "<p>$coursedesc</p>";
 ?>                
