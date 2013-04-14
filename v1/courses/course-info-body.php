@@ -57,6 +57,7 @@ while ($row = mysql_fetch_array($result2)) {
 		$career = mysql_fetch_assoc($result5);
 		$careername = $career['career_title'];
 		$careerdesc = $career['career_description'];
+		$careerid = $career['career_id'];
 		echo "<li><a href=../careers/career-info.php?id=$careerid>$careername</a></li>";
 		}
 	echo "</ul>";
