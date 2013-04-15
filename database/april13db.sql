@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 13, 2013 at 11:48 PM
+-- Generation Time: Apr 15, 2013 at 03:54 AM
 -- Server version: 5.5.25
 -- PHP Version: 5.4.4
 
@@ -524,24 +524,24 @@ CREATE TABLE `student` (
   `lastname` varchar(128) DEFAULT NULL,
   `username` varchar(128) DEFAULT NULL,
   `password` varchar(128) DEFAULT NULL,
-  `username` varchar(128) DEFAULT NULL,
   `status` enum('prospective','current') NOT NULL,
   `identity` varchar(999) CHARACTER SET utf8 NOT NULL,
   `login_at` datetime NOT NULL,
   PRIMARY KEY (`student_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `student`
 --
 
-INSERT INTO `student` (`student_id`, `firstname`, `lastname`, `username`, `password`, `status`) VALUES
-(1, 'Jessica', 'Schaengold', 'jschaen', 'password', 'current'),
-(2, 'Edgar', 'Nunez', 'enunez', 'password', 'current'),
-(3, 'Emily', 'Reynolds', 'ereynolds', 'password', 'current'),
-(4, 'Maura', 'Youngman', 'myoung', 'password', 'current'),
-(5, 'Ray', 'Alexander', 'ralex', 'password', 'current');
-(6, 'Edgar', 'Nunez', 'edgarn@umich.edu', NULL, 'prospective', 'https://www.google.com/accounts/o8/id?id=AItOawkwHXqXeJjZPkjAACTZ1UMlJoWmTdtL5d4', '2013-04-14 20:30:07');
+INSERT INTO `student` (`student_id`, `firstname`, `lastname`, `username`, `password`, `status`, `identity`, `login_at`) VALUES
+(1, 'Jessica', 'Schaengold', 'jschaen', 'password', 'current', '', '0000-00-00 00:00:00'),
+(2, 'Edgar', 'Nunez', 'enunez', 'password', 'current', '', '0000-00-00 00:00:00'),
+(3, 'Emily', 'Reynolds', 'ereynolds', 'password', 'current', '', '0000-00-00 00:00:00'),
+(4, 'Maura', 'Youngman', 'myoung', 'password', 'current', '', '0000-00-00 00:00:00'),
+(5, 'Ray', 'Alexander', 'ralex', 'password', 'current', '', '0000-00-00 00:00:00'),
+(6, 'Edgar', 'Nunez', 'edgarn@umich.edu', NULL, 'prospective', 'https://www.google.com/accounts/o8/id?id=AItOawkwHXqXeJjZPkjAACTZ1UMlJoWmTdtL5d4', '2013-04-14 20:30:07'),
+(7, 'Edgar', 'NuÃ±ez', 'bslugger@gmail.com', NULL, 'prospective', 'https://www.google.com/accounts/o8/id?id=AItOawkgogi7g1zTiP40PaCS2gIGTW6A1E_DccI', '2013-04-14 21:35:23');
 
 -- --------------------------------------------------------
 
