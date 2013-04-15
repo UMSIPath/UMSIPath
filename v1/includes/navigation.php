@@ -7,19 +7,22 @@
                         
             <div id="metanav">
             	<ul class="metanav">
-<?php if ( isset( $_SESSION["id"]) ) { ?>
-<li><a href="/umsipath/v1/account/index.php">Howdy, <?php echo($_SESSION["first"]) ?> </a></li>
-<?php } else { ?>
-<li><a href="/umsipath/v1/login.php">Howdy, Stranger</a></li>
-<? } ?>
-                	
-                	
-<?php if ( isset( $_SESSION["id"]) ) { ?>
-<li><a href="/umsipath/v1/logout.php">Logout</a></li>
-<?php } else { ?>
-<li><a href="/umsipath/v1/login.php">Login</a></li>
-<? } ?>
-                    
+
+<?php 
+if ( isset($_SESSION["id"]) ) { 
+echo('<li><a href="/umsipath/v1/profile.php">Howdy, ' . $_SESSION["first"] .'</a></li>'); 
+} else {
+echo('<li><a href="/umsipath/v1/login.php">Howdy, Stranger</a></li>');
+}
+?>
+            	
+<?php 
+if ( isset($_SESSION["id"]) ) { 
+echo('<li><a href="/umsipath/v1/logout.php">Logout</a></li>'); 
+} else {
+echo('<li><a href="/umsipath/v1/login.php">Login</a></li>');
+}
+?>            
                     
                 </ul>
             </div>

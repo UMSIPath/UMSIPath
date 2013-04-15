@@ -72,29 +72,22 @@ if ( $doLogin ) {
         $X_firstName = mysql_real_escape_string($firstName);
         $X_lastName = mysql_real_escape_string($lastName);
         $X_userEmail = mysql_real_escape_string($userEmail);
-        $sql = "SELECT id, email, first, last, avatar, twitter FROM Users WHERE identity='$X_identity'";
+        $sql = "SELECT student_id, username, firstname, lastname FROM student WHERE identity='$X_identity'";
         $result = mysql_query($sql);
-        if ( $result === FALSE ) {
-            error_log('Fail-SQL:'.$identity.','.$firstName.','.$lastName.','.$userEmail.','.mysql_error().','.$sql);
+        if ( $result === FALSE ) { error_log('Fail-SQL:'.$identity.','.$firstName.','.$lastName.','.$userEmail.','.mysql_error().','.$sql);
             $_SESSION["error"] = "Internal database error, sorry";
             header('Location: index.php');
             return;
         }
         $row = mysql_fetch_row($result);
         $theid = false;
-        $avatar = false;
-        $twitter = false;
         $didinsert = false;
         if ( $row !== FALSE ) { // Lets update!
             $theid = $row[0];
-            $avatar = $row[4];
-            $twitter = $row[5];
             if ( $row[1] != $userEmail || $row[2] != $firstName || $row[3] != $lastName ) {
-                $sql = "UPDATE Users SET email='$X_userEmail', first='$X_firstName', ".
-                        "last='$X_lastName', emailsha=SHA1('$X_userEmail'), ".
-                        "modified_at=NOW(), login_at=NOW() WHERE id='$theid'";
+                $sql = "UPDATE student SET username='$X_userEmail', firstname='$X_firstName', lastname='$X_lastName' WHERE student_id='$theid'";
             } else { 
-                $sql = "UPDATE Users SET login_at=NOW() WHERE id='$theid'";
+                $sql = "UPDATE Users SET login_at=NOW() WHERE student_id='$theid'";
             }
              $result = mysql_query($sql);
             if ( $result === FALSE ) {
@@ -106,9 +99,7 @@ if ( $doLogin ) {
                 error_log('User-Update:'.$identity.','.$firstName.','.$lastName.','.$userEmail);
             }
         } else { // Lets Insert!
-            $sql = "INSERT INTO Users (identity, email, first, last, identitysha, emailsha, created_at, modified_at, login_at) ".
-                    "VALUES ('$X_identity', '$X_userEmail', '$X_firstName', '$X_lastName', ".
-                    "SHA1('$X_identity'), SHA1('$X_userEmail'), NOW(), NOW(), NOW() )";
+            $sql = "INSERT INTO student (identity, username, firstname, lastname, login_at) ".          "VALUES ('$X_identity', '$X_userEmail', '$X_firstName', '$X_lastName', NOW() )";     
             $result = mysql_query($sql);
             if ( $result === FALSE ) {
                 error_log('Fail-SQL:'.$identity.','.$firstName.','.$lastName.','.$userEmail.','.mysql_error().','.$sql);
@@ -130,8 +121,6 @@ if ( $doLogin ) {
         $_SESSION["email"] = $userEmail;
         $_SESSION["first"] = $firstName;
         $_SESSION["last"] = $lastName;
-        if ( $avatar !== false && strlen($avatar) > 0 ) $_SESSION["avatar"] = $avatar;
-        if ( $twitter !== false && strlen($twitter) > 0 ) $_SESSION["twitter"] = $twitter;
         if ( isset($_SESSION["keeplogin"]) && $_SESSION["keeplogin"] == "on" ) {
             $guid = MD5($identity);
             $ct = create_secure_cookie($theid,$guid);
@@ -147,12 +136,7 @@ if ( $doLogin ) {
     }
 }
 
-//$mysqlquery=query the databse
-//if ($mysqlquery==false) {
-//$mysqlenter = INSERT into student                     //(firstname,lastname,username) VALUES
-//($firstName, $lastName, $userEmail);
-//mysql_query($mysqlenter);
-//}
+
 ?>
 
 <?php include('includes/head.php'); ?>
