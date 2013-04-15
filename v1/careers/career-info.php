@@ -59,6 +59,7 @@ while ($row = mysql_fetch_array($result2)) {
 	$result3 = mysql_query("SELECT * FROM skills WHERE skill_id = '$skillid'");
 	$skill = mysql_fetch_array($result3);
 	$skillname = $skill['skill_name'];
+	$skillid = $skill['skill_id'];
 	echo "<ul><li>Skill: <a href=../skills/skill-info.php?id=$skillid>$skillname</a></li></ul>";
 
 # finding associated course ID
@@ -78,6 +79,7 @@ while ($row = mysql_fetch_array($result2)) {
 		$coursename = $course['course_title'];
 		$coursenum = $course['course_number'];
 		$coursedesc = $course['course_description'];
+		$courseid = $course['course_id'];
 		echo "<li>$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a></li>";
 		}
 	echo "</ul>";

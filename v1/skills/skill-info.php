@@ -72,6 +72,7 @@ foreach ($courses as $value) {
 	$coursename = $course['course_title'];
 	$coursenum = $course['course_number'];
 	$coursedesc = $course['course_description'];
+	$courseid = $course['course_id'];
 	echo "<li>$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a><br></li>";
 	}
 echo "</ul>";
@@ -97,6 +98,7 @@ foreach ($careers as $value) {
 	$result = mysql_query("SELECT * FROM careers WHERE career_id = '$value'");
 	$career = mysql_fetch_assoc($result);
 	$careertitle = $career['career_title'];
+	$careerid = $career['career_id'];
 	echo "<li><a href=../careers/career-info.php?id=$careerid>$careertitle</a></li>";
 }
 echo "</ul>";
