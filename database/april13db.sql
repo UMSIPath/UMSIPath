@@ -524,7 +524,10 @@ CREATE TABLE `student` (
   `lastname` varchar(128) DEFAULT NULL,
   `username` varchar(128) DEFAULT NULL,
   `password` varchar(128) DEFAULT NULL,
+  `username` varchar(128) DEFAULT NULL,
   `status` enum('prospective','current') NOT NULL,
+  `identity` varchar(999) CHARACTER SET utf8 NOT NULL,
+  `login_at` datetime NOT NULL,
   PRIMARY KEY (`student_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
@@ -538,6 +541,7 @@ INSERT INTO `student` (`student_id`, `firstname`, `lastname`, `username`, `passw
 (3, 'Emily', 'Reynolds', 'ereynolds', 'password', 'current'),
 (4, 'Maura', 'Youngman', 'myoung', 'password', 'current'),
 (5, 'Ray', 'Alexander', 'ralex', 'password', 'current');
+(6, 'Edgar', 'Nunez', 'edgarn@umich.edu', NULL, 'prospective', 'https://www.google.com/accounts/o8/id?id=AItOawkwHXqXeJjZPkjAACTZ1UMlJoWmTdtL5d4', '2013-04-14 20:30:07');
 
 -- --------------------------------------------------------
 
