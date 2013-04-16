@@ -1101,3 +1101,92 @@ label:hover {
   -o-transition: color .2s ease;
   transition: color .2s ease;
 }
+
+
+/*** Results page styles ***/
+.results-module {
+	width: 100%;
+	background-color:#CCC;
+	overflow:auto;
+	min-height:100px;
+	background-image:url(../static/images/results-module-bg.jpg);
+}
+
+.results-module-name {
+	width: 35%;
+	float: left;
+	color: #fff;
+}
+
+.results-module-content {
+	background:#;
+	width: 65%;
+	float: left;
+}
+
+h3.results-module-type {
+	font-family: proxima-nova-reg, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	color: #efefef;
+	margin-top: 20px;
+	margin-left: 20px;
+	font-size: 14px;
+}
+
+h3.results-module-type#course {
+	color: 2C3844;
+	margin-left: 10px;
+}
+
+h2.results-module-label {
+	font-family: open sans, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	color: #efefef;
+	font-size: 21px;
+	line-height:25px;
+	margin: 15px 20px 20px 20px;
+}
+
+h2.results-module-label a {
+	text-decoration: none;
+	color: #efefef;
+}
+
+h2.results-module-label a:hover{
+	color:#8ADDD1;
+	
+	 /* transitions and animations */
+  -webkit-transition: color .4s ease;
+  -moz-transition: color .4s ease;
+  -ms-transition: color .4s ease;
+  -o-transition: color .4s ease;
+  transition: color .4s ease;
+}
+
+ul.results-course-list {
+	margin-top: 30px;
+}
+
+ul.results-course-list li {
+	font-family: open sans, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	color: #2C3844;
+	font-size: 21px;
+	line-height:25px;
+	margin: -15px 20px 20px 10px;
+}
+
+ul.results-course-list li a {
+	text-decoration:none;
+	color: #2C3844;
+}
+
+ul.results-course-list li a:hover {
+	color: #FF4E57;
+	
+	 /* transitions and animations */
+  -webkit-transition: color .4s ease;
+  -moz-transition: color .4s ease;
+  -ms-transition: color .4s ease;
+  -o-transition: color .4s ease;
+  transition: color .4s ease;
+}

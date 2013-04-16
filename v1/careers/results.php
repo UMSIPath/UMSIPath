@@ -11,7 +11,7 @@
     	<div id="careers-header-wrap">
         	<div id="careers-header">
             	<div id="section-icon"><img src="../static/images/section-icon-careers.png" /></div>
-            	<div id="section-header"><h1 class="section-header-double">Based on the skills you chose, we think these courses will interest you...</h1></div>
+            	<div id="section-header"><h1 class="section-header-double">Based on the careers you chose, we think these courses will interest you...</h1></div>
                 <div id="learnmore" class="careers"><p><a href="index.php">Want to learn more about these skills? Check them out here.</a></p></div>
             </div>
         </div>
@@ -38,7 +38,7 @@ $careers = $_POST['selectedcareers'];
 
 # looping through array
 foreach ($careers as $value) {
-	echo "<h1><b>Career:</b> $value</h1>";
+	echo "<h1>Career: $value</h1>";
 
 # locating career ID
 	$result = mysql_query("SELECT career_id FROM careers WHERE career_title = '$value'");
