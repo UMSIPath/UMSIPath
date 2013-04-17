@@ -2,7 +2,7 @@
     session_start();
 ?>
     
-<?php include('includes/head.php'); ?>
+<?php include('..includes/head.php'); ?>
     <title>UMSI / Discover</title>
     </head>
 

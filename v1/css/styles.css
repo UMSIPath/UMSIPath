@@ -699,7 +699,7 @@ h2.section-descriptor#careers {
 	width: 125px;
 }
 
-.save-btn {
+#save-btn {
    padding: 11px;
    text-align: center;
    width: 100px;
@@ -711,7 +711,7 @@ h2.section-descriptor#careers {
    display:block;
 }
 
-.save-btn:hover {
+#save-btn:hover {
 	background-color:#66BEE3;
 	
 	  /* transitions and animations */

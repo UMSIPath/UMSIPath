@@ -7,3 +7,5 @@
 	<head>
     <link rel="stylesheet" type="text/css" href="http://localhost:8888/umsipath/v1/css/styles.css"/>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
+   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+   <script type="text/javascript" src="../js/script.js"></script>
