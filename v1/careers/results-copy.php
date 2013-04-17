@@ -24,28 +24,58 @@
         
         <div id="content-wrap">
         	<div id="content">
-            	<div class="results-module"> <!-- repeatable module -->
-                	<div class="results-module-name">
-                    	<h3 class="results-module-type">Skill</h3>
-                    	<h2 class="results-module-label"><a href="#">Database Design Skill</a></h2>
+            	
+                <div class="results-module-career-wrap"> <!-- REPEAT ME module starts here -->
+                
+                    <div class="results-module-career">
+                            <h1 class="career-title">Academic Archivist</h1>
                     </div>
+                
+                    <div class="results-module"> <!-- repeatable module -->
+                        
+                        <div class="results-module-name">
+                            <h3 class="results-module-type">Skill</h3>
+                            <h2 class="results-module-label"><a href="#" target="_blank">Database Design Skill</a></h2>
+                        </div>
+                        
+                        <div class="results-module-content">
+                            <h3 class="results-module-type" id="course">Courses</h3>
+                            <ul class="results-course-list">
+                                <li><a href="#" target="_blank">course name here</a></li>
+                                <li><a href="#" target="_blank">another course</a></li>
+                                <li><a href="#" target="_blank">course name here</a></li>
+                                <li><a href="#" target="_blank">another course</a></li>
+                                <li><a href="#" target="_blank">course name here</a></li>
+                                <li><a href="#" target="_blank">another course</a></li>
+                            </ul>
+                        </div>
+                    </div> <!-- end repeatable module -->
                     
-                    <div class="results-module-content">
-                    	<h3 class="results-module-type" id="course">Courses</h3>
-                        <ul class="results-course-list">
-                        	<li><a href="#" target="_blank">course name here</a></li>
-                            <li><a href="#" target="_blank">another course</a></li>
-                            <li><a href="#" target="_blank">course name here</a></li>
-                            <li><a href="#" target="_blank">another course</a></li>
-                            <li><a href="#" target="_blank">course name here</a></li>
-                            <li><a href="#" target="_blank">another course</a></li>
-                        </ul>
-                    </div>
-                </div> <!-- end repeatable module -->
-           		
-				
-				
-	
+                     <div class="results-module"> <!-- repeatable module -->
+                        
+                        <div class="results-module-name">
+                            <h3 class="results-module-type">Skill</h3>
+                            <h2 class="results-module-label"><a href="#" target="_blank">Database Design Skill</a></h2>
+                        </div>
+                        
+                        <div class="results-module-content">
+                            <h3 class="results-module-type" id="course">Courses</h3>
+                            <ul class="results-course-list">
+                                <li><a href="#" target="_blank">course name here</a></li>
+                                <li><a href="#" target="_blank">another course</a></li>
+                                <li><a href="#" target="_blank">course name here</a></li>
+                                <li><a href="#" target="_blank">another course</a></li>
+                                <li><a href="#" target="_blank">course name here</a></li>
+                                <li><a href="#" target="_blank">another course</a></li>
+                            </ul>
+                        </div>
+                    </div> <!-- end repeatable module -->
+                    
+                    <div class="spacer"></div>
+                    
+                </div><!-- end results-module-career-wrap -->
+                
+                
                 
             </div><!-- end content -->
         </div><!-- end content wrap -->

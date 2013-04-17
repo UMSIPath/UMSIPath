@@ -22,6 +22,10 @@ $result = mysql_query("SELECT * FROM courses WHERE course_id = '$id'");
 ?>
             	
             	</h1></div>
-                <div id="save-btn-area"><p>Save button goes here</p></div>
+                <div id="save-btn-area">
+                	<div id="btn-wrap">
+                    	<a href="#" class="save-btn" onclick="loadXMLDoc()">Save</a>
+                    </div>
+                </div>
             </div>
         </div>

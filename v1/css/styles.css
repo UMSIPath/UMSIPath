@@ -302,10 +302,7 @@ nav ul ul li:first-child {
 
 	}
 	
-nav ul ul li:last-child {
-		border-bottom: none;
 
-	}
 	
 nav ul ul p {
 		font-family: proxima-nova-reg, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -686,18 +683,54 @@ h2.section-descriptor#careers {
 	width: 60%;
 }
 
+/* Save Button */
+
 #save-btn-area {
 	float: right;
 	width: 30%;
 	background-color:#2C3844;
 	height: 145px;
 	text-align:center;
+	padding-top
 }
 
-#save-btn-area p {
-	color: #fff;
-	padding-top: 50px;
+#btn-wrap {
+	margin: 52px auto;
+	width: 125px;
 }
+
+.save-btn {
+   padding: 11px;
+   text-align: center;
+   width: 100px;
+   height: 12px;
+   border-radius: 20px;
+   text-decoration: none;
+   background: #29ABE2;
+   color: #fff;
+   display:block;
+}
+
+.save-btn:hover {
+	background-color:#66BEE3;
+	
+	  /* transitions and animations */
+  -webkit-transition: background-color .2s ease;
+  -moz-transition: background-color .2s ease;
+  -ms-transition: background-color .2s ease;
+  -o-transition: background-color .2s ease;
+  transition: background-color .2s ease;
+}
+
+#btn-wrap a {
+	font-family: proxima-nova-semibold, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	text-transform:uppercase;
+	font-size:13px;
+	
+	margin-top: 50px;
+}
+
+
 
 #page-nav-btns {
 	width:30%;
@@ -816,7 +849,7 @@ ul.browseall#courses li a {
 }
 
 ul.browseall#courses li a:visited {
-	color: #ccc;
+	color: #b3b3b3;
 }
 
 ul.browseall#courses li a:hover {
@@ -871,6 +904,7 @@ span.course-name{
 .section-rsidebar {
 	float: right;
 	min-height: 600px; /* how to match content height? */
+	max-height: 700px;
 	width: 30%;
 	background-color:#3C4B5B;
 	margin-top: -40px;
@@ -1104,13 +1138,39 @@ label:hover {
 
 
 /*** Results page styles ***/
+
+.results-module-career-wrap {
+	width:100%;
+	overflow:auto;
+}
+
+.results-module-career {
+	width: 100%;
+	background-color:#11151A;
+	color: #fff;
+	min-height: 50px;
+	overflow:auto;
+}
+
+
 .results-module {
 	width: 100%;
 	background-color:#CCC;
 	overflow:auto;
 	min-height:100px;
 	background-image:url(../static/images/results-module-bg.jpg);
+	margin-bottom: 20px;
 }
+
+h1.career-title {
+	font-family: open sans, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight:300;
+	color: #efefef;
+	margin-left: 20px;
+	font-size: 24px;
+	margin-top: 10px;
+}
+	
 
 .results-module-name {
 	width: 35%;
@@ -1124,9 +1184,14 @@ label:hover {
 	float: left;
 }
 
+.spacer {
+	width: 100%;
+	height: 40px;
+}
+
 h3.results-module-type {
 	font-family: proxima-nova-reg, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	color: #efefef;
+	color: #b2b2b2;
 	margin-top: 20px;
 	margin-left: 20px;
 	font-size: 14px;
@@ -1148,7 +1213,7 @@ h2.results-module-label {
 
 h2.results-module-label a {
 	text-decoration: none;
-	color: #efefef;
+	color: #b2b2b2;
 }
 
 h2.results-module-label a:hover{
