@@ -24,27 +24,56 @@
         
         <div id="content-wrap">
         	<div id="content">
-            	
-                
-                <div class="results-module"> <!-- repeatable module -->
-                	<div class="results-module-name">
-                    	<h3 class="results-module-type">Skill</h3>
-                    	<h2 class="results-module-label"><a href="#">Database Design Skill</a></h2>
-                    </div>
-                    
-                    <div class="results-module-content">
-                    	<h3 class="results-module-type" id="course">Courses</h3>
-                        <ul class="results-course-list">
-                        	<li><a href="#" target="_blank">course name here</a></li>
-                            <li><a href="#" target="_blank">another course</a></li>
-                            <li><a href="#" target="_blank">course name here</a></li>
-                            <li><a href="#" target="_blank">another course</a></li>
-                            <li><a href="#" target="_blank">course name here</a></li>
-                            <li><a href="#" target="_blank">another course</a></li>
-                        </ul>
-                    </div>
-                </div> <!-- end repeatable module -->
-                			
+
+<?php
+require_once "../db.php";
+session_start();
+
+if(isset($_POST['selectedskills'])) 
+{
+
+$skills = $_POST['selectedskills'];
+
+# looping through array
+foreach ($skills as $value) {
+echo <<< TEST
+<div class="results-module">
+<div class="results-module-name">
+<h3 class="results-module-type">Skill</h3>
+<h2 class="results-module-label"><a href="#">
+$value</a></h2></div>
+<div class="results-module-content">
+<h3 class="results-module-type" id="course">Courses</h3>
+<ul class="results-course-list">
+
+TEST;
+
+# locating skill ID
+	$result = mysql_query("SELECT skill_id FROM skills WHERE skill_name = '$value'");
+	$id = mysql_fetch_assoc($result);
+	$skillid = $id['skill_id'];
+
+# finding associated course ID
+	$result = mysql_query("SELECT course_id FROM courses_skills WHERE skill_id = '$skillid'");
+	$courses = array();
+	while ($row = mysql_fetch_array($result)) {
+		$courseid = $row['course_id'];
+		$courses[] = $courseid;
+	}
+	
+# looking up associated course info 
+	foreach ($courses as $value) {
+		$result = mysql_query("SELECT * FROM courses WHERE course_id = '$value'");
+		$course = mysql_fetch_assoc($result);
+		$coursename = $course['course_title'];
+		$coursenum = $course['course_number'];
+		$courseid = $course['course_id'];
+		echo "<li>$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a></li>";
+		}
+	echo"</ul></div></div>";
+}
+}
+?>                    
                 
             </div> <!-- end content -->
         </div> <!-- end content-wrap -->
