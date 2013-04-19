@@ -53,7 +53,7 @@ echo "$skillname";
             	<div class="section-info">
 <?php
 # getting attributes of skill
-echo "$skilldesc";
+echo "<p>$skilldesc</p>";
 		
 # finding associated course ID
 $result = mysql_query("SELECT course_id FROM courses_skills WHERE skill_id = '$id'");

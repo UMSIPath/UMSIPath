@@ -54,46 +54,29 @@ echo "$careername";
                 	
                 </div>
                 <div class="section-rsidebar">
-                    <div class="related">
-                    	<h4>Related Skills & Courses</h4>
-<?php
-$result2 = mysql_query("SELECT skill_id FROM careers_skills WHERE career_id = '$careerid'");
-while ($row = mysql_fetch_array($result2)) {
-	$skillid = $row['skill_id'];
-	$result3 = mysql_query("SELECT * FROM skills WHERE skill_id = '$skillid'");
-	$skill = mysql_fetch_array($result3);
-	$skillname = $skill['skill_name'];
-	$skillid = $skill['skill_id'];
-	echo "<ul><li>Skill: <a href=../skills/skill-info.php?id=$skillid>$skillname</a></li></ul>";
-
-# finding associated course ID
-	$result4 = mysql_query("SELECT course_id FROM courses_skills WHERE skill_id = '$skillid'");
-	$courses = array();
-	while ($row = mysql_fetch_array($result4)) {
-		$courseid = $row['course_id'];
-		$courses[] = $courseid;
-	}
-
-
-# looking up associated course info
-	echo "<ul>";
-	foreach ($courses as $value) {
-		$result5 = mysql_query("SELECT * FROM courses WHERE course_id = '$value'");
-		$course = mysql_fetch_assoc($result5);
-		$coursename = $course['course_title'];
-		$coursenum = $course['course_number'];
-		$coursedesc = $course['course_description'];
-		$courseid = $course['course_id'];
-		echo "<li>$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a></li>";
-		}
-	echo "</ul>";
-	echo "</div><div id=\"rsidebar-divider\"></div><div class=\"related\">";
-	}
-
-
-?>
+                	
+                    <div class="rsidebar-header">
+                    	<div class="rsh-left"><h4>Related skills</h4></div>
+                        <div class="rsh-right"><h4>Related courses</h4></div>
                     </div>
-                </div>
+                    
+                    <div id="rsidebar-divider-top"></div> <!-- don't move me -->
+                    
+                    <div class="related-wrapper">
+                    	<div class="related-left"><h5><a href="#">skill name lorem</a></h5></div>
+                        <div class="related-right">
+                        	<ul>
+                            	<li><a href="#">course 1</a></li>
+                                <li><a href="#">course 2</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                        
+                   <div id="rsidebar-divider"></div> <!-- repeat me -->
+
+                                        
+                  
+                </div><!-- end right sidebar -->
 			</div><!-- end content -->        
         
         

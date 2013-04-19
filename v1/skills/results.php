@@ -36,11 +36,15 @@ $skills = $_POST['selectedskills'];
 
 # looping through array
 foreach ($skills as $value) {
+	# locating skill ID
+	$result = mysql_query("SELECT skill_id FROM skills WHERE skill_name = '$value'");
+	$id = mysql_fetch_assoc($result);
+	$skillid = $id['skill_id'];
 echo <<< TEST
 <div class="results-module">
 <div class="results-module-name">
 <h3 class="results-module-type">Skill</h3>
-<h2 class="results-module-label"><a href="#">
+<h2 class="results-module-label"><a href="../skills/skill-info.php?id=$skillid" target="_blank">
 $value</a></h2></div>
 <div class="results-module-content">
 <h3 class="results-module-type" id="course">Courses</h3>
@@ -48,10 +52,7 @@ $value</a></h2></div>
 
 TEST;
 
-# locating skill ID
-	$result = mysql_query("SELECT skill_id FROM skills WHERE skill_name = '$value'");
-	$id = mysql_fetch_assoc($result);
-	$skillid = $id['skill_id'];
+
 
 # finding associated course ID
 	$result = mysql_query("SELECT course_id FROM courses_skills WHERE skill_id = '$skillid'");
