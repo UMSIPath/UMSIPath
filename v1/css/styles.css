@@ -904,7 +904,6 @@ span.course-name{
 .section-rsidebar {
 	float: right;
 	min-height: 600px; /* how to match content height? */
-	max-height: 700px;
 	width: 30%;
 	background-color:#3C4B5B;
 	margin-top: -40px;
@@ -926,6 +925,7 @@ span.course-name{
 .rsh-right {
 	width: 55%;
 	float: left;
+	border-left: 1px solid #212A33;
 }
 
 .rsh-left h4 {
@@ -947,7 +947,7 @@ span.course-name{
 #rsidebar-divider-top {
 	border-bottom: 1px solid #636F7C;
 	margin: 10px 20px;
-	height: 25px;
+	height: 30px;
 }
 
 #rsidebar-divider {
