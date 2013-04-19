@@ -24,56 +24,84 @@
         
         <div id="content-wrap">
         	<div id="content">
-            	
-                <div class="results-module-career-wrap"> <!-- REPEAT ME module starts here -->
+             <div class="results-module-career-wrap"> <!-- REPEAT ME module starts here -->
                 
                     <div class="results-module-career">
-                            <h1 class="career-title">Academic Archivist</h1>
-                    </div>
+            			<?php
+require_once "../db.php";
+session_start();
+
+if(isset($_POST['selectedcareers'])) 
+{
+
+$careers = $_POST['selectedcareers'];
+
+# looping through array
+foreach ($careers as $value) {
+	echo "<h1 class='career-title'>$value</h1>";
+	?>
+   
+    </div>
+	<div class="results-module"> <!-- repeatable module -->
+    	<div class="results-module-name">
+        
+
+<?php
+
+# locating career ID
+	$result = mysql_query("SELECT career_id FROM careers WHERE career_title = '$value'");
+	$id = mysql_fetch_assoc($result);
+	$careerid = $id['career_id'];
+
+# finding associated skills
+	$result2 = mysql_query("SELECT skill_id FROM careers_skills WHERE career_id = '$careerid'");
+	while ($row = mysql_fetch_array($result2)) {
+		$skillid = $row['skill_id'];
+		$result3 = mysql_query("SELECT * FROM skills WHERE skill_id = '$skillid'");
+		$skill = mysql_fetch_array($result3);
+		$skillname = $skill['skill_name'];
+		echo "<h3 class='results-module-type'>Skill</h3>";
+		echo "<h2 class='results-module-label'><a href='../skills/skill-info.php?id=$skillid' target='_blank'>$skillname</a></h2>";
+		?>
+        
+        </div><!-- end results module name -->
+                        
+                        <div class="results-module-content">
+                            
+        <?php
+
+# finding associated course ID
+		$result4 = mysql_query("SELECT course_id FROM courses_skills WHERE skill_id = '$skillid'");
+		$courses = array();
+		while ($row = mysql_fetch_array($result4)) {
+			$courseid = $row['course_id'];
+			$courses[] = $courseid;
+		}
+	
+# looking up associated course info
+		echo "<h3 class='results-module-type' id='course'>Courses</h3> <ul class='results-course-list'>";
+		foreach ($courses as $value) {
+			$result5 = mysql_query("SELECT * FROM courses WHERE course_id = '$value'");
+			$course = mysql_fetch_assoc($result5);
+			$coursename = $course['course_title'];
+			$coursenum = $course['course_number'];
+			echo "<li>$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a></li><br>";
+			}
+		echo "</ul></div></div>";
+		}
+		}
+		}
+?>
                 
-                    <div class="results-module"> <!-- repeatable module -->
+              <div class='spacer'></div>
+              
+              </div>    
                         
-                        <div class="results-module-name">
-                            <h3 class="results-module-type">Skill</h3>
-                            <h2 class="results-module-label"><a href="#" target="_blank">Database Design Skill</a></h2>
-                        </div>
+                       
                         
-                        <div class="results-module-content">
-                            <h3 class="results-module-type" id="course">Courses</h3>
-                            <ul class="results-course-list">
-                                <li><a href="#" target="_blank">course name here</a></li>
-                                <li><a href="#" target="_blank">another course</a></li>
-                                <li><a href="#" target="_blank">course name here</a></li>
-                                <li><a href="#" target="_blank">another course</a></li>
-                                <li><a href="#" target="_blank">course name here</a></li>
-                                <li><a href="#" target="_blank">another course</a></li>
-                            </ul>
-                        </div>
-                    </div> <!-- end repeatable module -->
+                               
                     
-                     <div class="results-module"> <!-- repeatable module -->
-                        
-                        <div class="results-module-name">
-                            <h3 class="results-module-type">Skill</h3>
-                            <h2 class="results-module-label"><a href="#" target="_blank">Database Design Skill</a></h2>
-                        </div>
-                        
-                        <div class="results-module-content">
-                            <h3 class="results-module-type" id="course">Courses</h3>
-                            <ul class="results-course-list">
-                                <li><a href="#" target="_blank">course name here</a></li>
-                                <li><a href="#" target="_blank">another course</a></li>
-                                <li><a href="#" target="_blank">course name here</a></li>
-                                <li><a href="#" target="_blank">another course</a></li>
-                                <li><a href="#" target="_blank">course name here</a></li>
-                                <li><a href="#" target="_blank">another course</a></li>
-                            </ul>
-                        </div>
-                    </div> <!-- end repeatable module -->
                     
-                    <div class="spacer"></div>
-                    
-                </div><!-- end results-module-career-wrap -->
                 
                 
                 

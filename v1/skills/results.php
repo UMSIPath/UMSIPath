@@ -24,10 +24,8 @@
         
         <div id="content-wrap">
         	<div id="content">
-           		
-				
-				
-				<?php
+
+<?php
 require_once "../db.php";
 session_start();
 
@@ -38,9 +36,17 @@ $skills = $_POST['selectedskills'];
 
 # looping through array
 foreach ($skills as $value) {
-	# Skill: Golden Thread
-	echo "<h1><b>Skill:</b> $value</h1>";
-	
+echo <<< TEST
+<div class="results-module">
+<div class="results-module-name">
+<h3 class="results-module-type">Skill</h3>
+<h2 class="results-module-label"><a href="#">
+$value</a></h2></div>
+<div class="results-module-content">
+<h3 class="results-module-type" id="course">Courses</h3>
+<ul class="results-course-list">
+
+TEST;
 
 # locating skill ID
 	$result = mysql_query("SELECT skill_id FROM skills WHERE skill_name = '$value'");
@@ -56,35 +62,21 @@ foreach ($skills as $value) {
 	}
 	
 # looking up associated course info 
-	echo "<br>Relevant courses:";
 	foreach ($courses as $value) {
 		$result = mysql_query("SELECT * FROM courses WHERE course_id = '$value'");
 		$course = mysql_fetch_assoc($result);
 		$coursename = $course['course_title'];
 		$coursenum = $course['course_number'];
 		$courseid = $course['course_id'];
-		echo "<br><i>$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a></i>";
+		echo "<li>$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a></li>";
 		}
-	echo "<br><br>";
+	echo"</ul></div></div>";
 }
 }
-
-else {
-	echo "Not sure what skill you want to learn? Browse all classes:<br>";
-	$result = mysql_query("SELECT * FROM courses");
-	while ($row = mysql_fetch_array($result)) {
-		$coursename = $row['course_title'];
-		$coursenum = $row['course_number'];
-		$coursedesc = $row['course_description'];
-		$courseid = $row['course_id'];
-		echo "<br><i>$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a></i><br>";
-		}
-}
-
-?>
+?>                    
                 
-            </div>
-        </div>
+            </div> <!-- end content -->
+        </div> <!-- end content-wrap -->
         
         
    	

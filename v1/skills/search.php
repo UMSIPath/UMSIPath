@@ -26,7 +26,7 @@
         	<div id="content">
             	<h2 class="page-subheader">Which skills are you interested in? Select all that apply.</h2>
             	
-                <form id="checklist-form" action="results-copy.php" method="post">
+                <form id="checklist-form" action="results.php" method="post">
                 <div id="checklist">
 					<?php
                     require_once "../db.php";

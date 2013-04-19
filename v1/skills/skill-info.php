@@ -35,7 +35,7 @@ echo "$skillname";
             	</h1></div>
                 <div id="save-btn-area">
                 	<div id="btn-wrap">
-                    	<a href="#" class="save-btn" onclick="loadXMLDoc()">Save</a>
+                    	<a href="#" id="save-btn" class="default">Save</a>
                     </div>
                 </div>
             </div>
