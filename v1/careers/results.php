@@ -25,9 +25,9 @@
         <div id="content-wrap">
         	<div id="content">
              <div class="results-module-career-wrap"> <!-- REPEAT ME module starts here -->
-                
-                    <div class="results-module-career">
-            			<?php
+
+
+<?php
 require_once "../db.php";
 session_start();
 
@@ -38,20 +38,16 @@ $careers = $_POST['selectedcareers'];
 
 # looping through array
 foreach ($careers as $value) {
-	echo "<h1 class='career-title'>$value</h1>";
-	?>
-   
-    </div>
-	<div class="results-module"> <!-- repeatable module -->
-    	<div class="results-module-name">
-        
-
-<?php
-
-# locating career ID
 	$result = mysql_query("SELECT career_id FROM careers WHERE career_title = '$value'");
 	$id = mysql_fetch_assoc($result);
 	$careerid = $id['career_id'];
+
+echo <<< TEST
+<div class="results-module-career">
+<h1 class='career-title'>$value</h1>
+</div>
+
+TEST;
 
 # finding associated skills
 	$result2 = mysql_query("SELECT skill_id FROM careers_skills WHERE career_id = '$careerid'");
@@ -60,16 +56,18 @@ foreach ($careers as $value) {
 		$result3 = mysql_query("SELECT * FROM skills WHERE skill_id = '$skillid'");
 		$skill = mysql_fetch_array($result3);
 		$skillname = $skill['skill_name'];
-		echo "<h3 class='results-module-type'>Skill</h3>";
-		echo "<h2 class='results-module-label'><a href='../skills/skill-info.php?id=$skillid' target='_blank'>$skillname</a></h2>";
-		?>
-        
-        </div><!-- end results module name -->
-                        
-                        <div class="results-module-content">
-                            
-        <?php
-
+		echo <<< TEST
+		
+		<div class="results-module"> 
+			<div class="results-module-name">
+				<h3 class="results-module-type">Skill</h3>
+				<h2 class="results-module-label"><a href=../skills/skill-info.php?id=$skillid target=_blank>$skillname</a></h2>
+		 	</div>
+		 	<div class="results-module-content">
+                <h3 class="results-module-type" id="course">Courses</h3>
+                <ul class="results-course-list">
+TEST;
+		
 # finding associated course ID
 		$result4 = mysql_query("SELECT course_id FROM courses_skills WHERE skill_id = '$skillid'");
 		$courses = array();
@@ -79,32 +77,22 @@ foreach ($careers as $value) {
 		}
 	
 # looking up associated course info
-		echo "<h3 class='results-module-type' id='course'>Courses</h3> <ul class='results-course-list'>";
 		foreach ($courses as $value) {
 			$result5 = mysql_query("SELECT * FROM courses WHERE course_id = '$value'");
 			$course = mysql_fetch_assoc($result5);
 			$coursename = $course['course_title'];
 			$coursenum = $course['course_number'];
-			echo "<li>$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a></li><br>";
+			$courseid = $course['course_id'];
+			echo "<li><a href=../courses/course-info.php?id=$courseid>$coursenum: $coursename</a></li>";
 			}
-		echo "</ul></div></div>";
+		echo "</div></div>";
 		}
 		}
 		}
-?>
+?>                    
                 
-              <div class='spacer'></div>
-              
-              </div>    
-                        
-                       
-                        
-                               
-                    
-                    
-                
-                
-                
+                      
+                </div><!-- end results-module-career-wrap -->    
             </div><!-- end content -->
         </div><!-- end content wrap -->
         

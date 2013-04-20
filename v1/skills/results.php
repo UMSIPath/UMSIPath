@@ -69,7 +69,7 @@ TEST;
 		$coursename = $course['course_title'];
 		$coursenum = $course['course_number'];
 		$courseid = $course['course_id'];
-		echo "<li>$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a></li>";
+		echo "<li><a href=../courses/course-info.php?id=$courseid>$coursenum: $coursename</a></li>";
 		}
 	echo"</ul></div></div>";
 }
