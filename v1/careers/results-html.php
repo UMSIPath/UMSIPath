@@ -25,39 +25,17 @@
         <div id="content-wrap">
         	<div id="content">
              <div class="results-module-career-wrap"> <!-- REPEAT ME module starts here -->
-
-
-<?php
-require_once "../db.php";
-session_start();
-
-if(isset($_POST['selectedcareers'])) 
-{
-
-$careers = $_POST['selectedcareers'];
-
-# looping through array
-foreach ($careers as $value) {
-
-ECHO <<< TEST
+                
                     <div class="results-module-career">
-                    	<h1 class='career-title'>$value</h1>
+                    	<h1 class='career-title'>Career name</h1>
                
                     </div>
-TEST;
-
-$result2 = mysql_query("SELECT skill_id FROM careers_skills WHERE career_id = '$careerid'");
-	while ($row = mysql_fetch_array($result2)) {
-		$skillid = $row['skill_id'];
-		$result3 = mysql_query("SELECT * FROM skills WHERE skill_id = '$skillid'");
-		$skill = mysql_fetch_array($result3);
-		$skillname = $skill['skill_name'];
-
-ECHO <<< TEST2
+                
                     <div class="results-module"> <!-- repeatable module -->
+                        
                         <div class="results-module-name">
                             <h3 class="results-module-type">Skill</h3>
-                            <h2 class="results-module-label"><a href="#" target="_blank">$skillname</a></h2>
+                            <h2 class="results-module-label"><a href="#" target="_blank">Database Design Skill</a></h2>
                         </div>
                         
                         <div class="results-module-content">
@@ -71,17 +49,14 @@ ECHO <<< TEST2
                                 <li><a href="#" target="_blank">another course</a></li>
                             </ul>
                         </div>
-                        
                     </div> <!-- end repeatable module -->
                     
                     <div class="spacer"></div>
-TEST2;
-}
-}
-}
-?>
-                      
-                </div><!-- end results-module-career-wrap -->    
+                    
+                </div><!-- end results-module-career-wrap -->
+                
+                
+                
             </div><!-- end content -->
         </div><!-- end content wrap -->
         
