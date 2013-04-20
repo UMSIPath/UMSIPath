@@ -46,7 +46,7 @@
                 </div> 
             
                 <div id="page-nav-btns">
-                    <div id="top-btn"><a class="top-btn" href="#">Top</a></div>
+                    <!-- <div id="top-btn"><a class="top-btn" href="#">Top</a></div> -->
                     <div id="next-btn"><input type="submit" class="button" value="Next"></div>
                 </div>
                 </form>
