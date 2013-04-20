@@ -16,16 +16,25 @@ $result = mysql_query("SELECT * FROM courses WHERE course_id = '$id'");
 		$credits = $course['units'];
 		$syllabus = $course['syllabus'];
 		$type = $course['type'];
-		echo "<h3>Credits: $credits</h3>";
-		echo "<h3>Type: $type";
+
+		echo "<h3>Description:</h3>";
+		echo "<p>$coursedesc</p>";
+		echo "<div id='section-divider'></div>";
+		echo "<h3>Details</h3>";
+		echo "<h4>Credits: $credits</h4>";
+		echo "<h4>Type: $type</h4>";
 
 if ($syllabus == '') {
-    echo "<h3>No syllabus available</h3>";
+    echo <<< HEY
+	<a href="#" id="syllabus-btn" class="none">No Syllabus Available</a>
+	HEY;
 } 
-else { echo "<h3>Syllabus: <a href=$syllabus>download</a></h3>";}
+else { echo <<< HEY
+	<a href="$syllabus" id="syllabus-btn" class="default">Download Syllabus</a>
+HEY;
 
-		echo "<h3>About SI $coursenum:</h3>";
-		echo "<p>$coursedesc</p>";
+#"<h4>Syllabus: <a href=$syllabus>download</a></h4>";
+}
 ?>                
                 </div>
             	
@@ -78,11 +87,3 @@ TEST;
         
         </div><!-- end content-wrap -->
         
-    </div><!-- end main -->
-</div><!-- end container -->
-
-<?php include('../includes/footer.php'); ?>
-
-</div>
-</body>
-</html>
