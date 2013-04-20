@@ -126,7 +126,7 @@ html, body, container, main {
 	margin: 0 auto;
 	padding-top: 40px;
 	padding-bottom: 40px;
-	overflow:auto;
+	overflow:hidden;
 }
 
 
@@ -885,11 +885,13 @@ span.course-name{
 .section-info {
 	float: left;
 	width: 65%;
-	padding: 0 20px 0 20px;
+	padding: 0 20px 1000px 20px;
+	margin-bottom: -1000px;
+	overflow:hidden;
 }
 
 .section-info h3 {
-	font-family: proxima-nova-semibold, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: proxima-nova-bold, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: 14px;
 	font-weight: 300;
 	padding-bottom: 5px;
@@ -951,7 +953,7 @@ span.course-name{
    margin-top: 20px;
    border-radius: 20px;
    text-decoration: none;
-   background: #A7CFD8;
+   background: #B4BAC0;
    color: #212A33;
    display:block;
    
@@ -960,6 +962,10 @@ span.course-name{
 	text-transform:uppercase;
 	font-size:13px;
 	
+}
+
+#syllabus-btn.inactive:hover {
+	cursor: default;
 }
 
 
@@ -972,8 +978,9 @@ span.course-name{
 	background-color:#3C4B5B;
 	background-image:url(../static/images/sidebar-bg.jpg);
 	margin-top: -40px;
-	margin-bottom: -40px;
+	margin-bottom: -1040px;
 	padding-top: 0px;
+	padding-bottom:1000px;
 	overflow:auto;
 }
 

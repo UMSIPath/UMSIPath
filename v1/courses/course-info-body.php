@@ -17,23 +17,19 @@ $result = mysql_query("SELECT * FROM courses WHERE course_id = '$id'");
 		$syllabus = $course['syllabus'];
 		$type = $course['type'];
 
-		echo "<h3>Description:</h3>";
+		echo "<h3>Description</h3>";
 		echo "<p>$coursedesc</p>";
 		echo "<div id='section-divider'></div>";
 		echo "<h3>Details</h3>";
 		echo "<h4>Credits: $credits</h4>";
-		echo "<h4>Type: $type</h4>";
+		echo "<h4>Course Type: $type</h4>";
 
 if ($syllabus == '') {
-    echo <<< HEY
-	<a href="#" id="syllabus-btn" class="none">No Syllabus Available</a>
-	HEY;
+    echo "<a href='#' id='syllabus-btn' class='inactive'>No Syllabus Available</a>";
 } 
 else { echo <<< HEY
 	<a href="$syllabus" id="syllabus-btn" class="default">Download Syllabus</a>
 HEY;
-
-#"<h4>Syllabus: <a href=$syllabus>download</a></h4>";
 }
 ?>                
                 </div>
