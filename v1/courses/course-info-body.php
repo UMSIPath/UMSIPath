@@ -30,8 +30,12 @@ else { echo "<h3>Syllabus: <a href=$syllabus>download</a></h3>";}
                 </div>
             	
                 <div class="section-rsidebar">
-                	<div class="related">
-                    	<h4>Related Skills & Careers</h4>
+                	<div class="rsidebar-header">
+                    	<div class="rsh-left"><h4>Related skills</h4></div>
+                        <div class="rsh-right"><h4>Related careers</h4></div>
+                    </div>
+                    
+                    <div id="rsidebar-divider-top"></div> <!-- don't move me -->
 <?php
 $result2 = mysql_query("SELECT skill_id FROM courses_skills WHERE course_id = '$id'");
 while ($row = mysql_fetch_array($result2)) {
@@ -39,7 +43,11 @@ while ($row = mysql_fetch_array($result2)) {
 	$result3 = mysql_query("SELECT * FROM skills WHERE skill_id = '$skillid'");
 	$skill = mysql_fetch_array($result3);
 	$skillname = $skill['skill_name'];
-	echo "<ul><li>Skill: <a href=../skills/skill-info.php?id=$skillid>$skillname</a></li></ul>";
+echo <<< TEST
+	
+	<div class="related-wrapper">
+    	<div class="related-left"><h5><a href="../skills/skill-info.php?id=$skillid">$skillname</a></h5></div>	
+TEST;
 
 # finding associated career ID
 	$result4 = mysql_query("SELECT career_id FROM careers_skills WHERE skill_id = '$skillid'");
@@ -51,7 +59,7 @@ while ($row = mysql_fetch_array($result2)) {
 
 
 # looking up associated career info
-	echo "<ul>";
+	echo "<div class=\"related-right\"><ul>";
 	foreach ($careers as $value) {
 		$result5 = mysql_query("SELECT * FROM careers WHERE career_id = '$value'");
 		$career = mysql_fetch_assoc($result5);
@@ -60,17 +68,21 @@ while ($row = mysql_fetch_array($result2)) {
 		$careerid = $career['career_id'];
 		echo "<li><a href=../careers/career-info.php?id=$careerid>$careername</a></li>";
 		}
-	echo "</ul>";
-	echo "</div><div id=\"rsidebar-divider\"></div><div class=\"related\">";
+	echo "</ul></div></div><div id=\"rsidebar-divider\"></div>";
 	}
 ?>                
             
-            		</ul>
-                </div>
-            	
-            	</div><!-- end section-rsidebar -->
-            
+             </div><!-- end right sidebar -->
 			</div><!-- end content -->        
         
         
         </div><!-- end content-wrap -->
+        
+    </div><!-- end main -->
+</div><!-- end container -->
+
+<?php include('../includes/footer.php'); ?>
+
+</div>
+</body>
+</html>
