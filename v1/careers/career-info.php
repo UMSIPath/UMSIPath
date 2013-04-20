@@ -63,12 +63,16 @@ echo "$careername";
                     <div id="rsidebar-divider-top"></div> <!-- don't move me -->
 <?php
 $result2 = mysql_query("SELECT skill_id FROM careers_skills WHERE career_id = '$careerid'");
+
+# ADD CHECK FOR IF CAREER HAS NO SKILLS
+
 while ($row = mysql_fetch_array($result2)) {
 	$skillid = $row['skill_id'];
 	$result3 = mysql_query("SELECT * FROM skills WHERE skill_id = '$skillid'");
 	$skill = mysql_fetch_array($result3);
 	$skillname = $skill['skill_name'];
 	$skillid = $skill['skill_id'];
+
 echo <<< TEST
 	
 	<div class="related-wrapper">
@@ -83,7 +87,11 @@ TEST;
 		$courses[] = $courseid;
 	}
 
-
+#if the skill has no courses
+	if (empty($courses)) {
+		echo "<div class=\"related-right\"><ul><li><a href=#>TBD</li></ul></div></div><div id=\"rsidebar-divider\"></div>";
+	}	
+	else {
 # looking up associated course info
 	echo "<div class=\"related-right\"><ul>";
 	foreach ($courses as $value) {
@@ -97,7 +105,8 @@ TEST;
 		}
 	echo "</ul></div></div><div id=\"rsidebar-divider\"></div>";
 	}
-
+	}
+}
 
 ?>
                     </div>

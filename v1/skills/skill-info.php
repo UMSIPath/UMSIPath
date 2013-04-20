@@ -70,6 +70,11 @@ while ($row = mysql_fetch_array($result)) {
                     	<h4>Related Courses</h4>
 <?php
 echo "<ul>";
+
+if (empty($courses)) {
+	echo "<li>TBD</li>";
+	}
+else {
 foreach ($courses as $value) {
 	$result = mysql_query("SELECT * FROM courses WHERE course_id = '$value'");
 	$course = mysql_fetch_assoc($result);
@@ -80,6 +85,7 @@ foreach ($courses as $value) {
 	echo "<li>$coursenum: <a href=../courses/course-info.php?id=$courseid>$coursename</a><br></li>";
 	}
 echo "</ul>";
+}
 ?>
                      </div>
                     
@@ -95,6 +101,10 @@ while ($row = mysql_fetch_array($result)) {
 	$careerid = $row['career_id'];
 	$careers[] = $careerid;
 }
+if (empty($careers)) {
+	echo "<ul><li>TBD</li></ul>";
+	}
+else {
 
 # looking up associated career info
 echo "<ul>";
@@ -106,6 +116,7 @@ foreach ($careers as $value) {
 	echo "<li><a href=../careers/career-info.php?id=$careerid>$careertitle</a></li>";
 }
 echo "</ul>";
+}
 ?>
                     </div>
                 </div>
