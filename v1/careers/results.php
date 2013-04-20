@@ -51,17 +51,41 @@ TEST;
 
 # finding associated skills
 	$result2 = mysql_query("SELECT skill_id FROM careers_skills WHERE career_id = '$careerid'");
+	
 	while ($row = mysql_fetch_array($result2)) {
 		$skillid = $row['skill_id'];
-		$result3 = mysql_query("SELECT * FROM skills WHERE skill_id = '$skillid'");
-		$skill = mysql_fetch_array($result3);
-		$skillname = $skill['skill_name'];
+		$skills[] = $skillid;
+	}
+	if(empty($skills)) {
 		echo <<< TEST
 		
 		<div class="results-module"> 
 			<div class="results-module-name">
 				<h3 class="results-module-type">Skill</h3>
-				<h2 class="results-module-label"><a href=../skills/skill-info.php?id=$skillid target=_blank>$skillname</a></h2>
+				<h2 class="results-module-label">No results!</h2>
+		 	</div>
+		 	<div class="results-module-content">
+                <h3 class="results-module-type" id="course">Courses</h3>
+                <ul class="results-course-list">
+                	<li>No courses found :(</li>
+            	</ul>
+            </div></div>
+TEST;
+	}
+	else {
+	
+# looking up associated skill info 
+	foreach ($skills as $value) {
+		$result3 = mysql_query("SELECT * FROM skills WHERE skill_id = '$value'");
+		$skill = mysql_fetch_array($result3);
+		$skillname = $skill['skill_name'];
+		
+		echo <<< TEST
+		
+		<div class="results-module"> 
+			<div class="results-module-name">
+				<h3 class="results-module-type">Skill</h3>
+				<h2 class="results-module-label"><a href=../skills/skill-info.php?id=$value target=_blank>$skillname</a></h2>
 		 	</div>
 		 	<div class="results-module-content">
                 <h3 class="results-module-type" id="course">Courses</h3>
@@ -69,13 +93,16 @@ TEST;
 TEST;
 		
 # finding associated course ID
-		$result4 = mysql_query("SELECT course_id FROM courses_skills WHERE skill_id = '$skillid'");
+		$result4 = mysql_query("SELECT course_id FROM courses_skills WHERE skill_id = '$value'");
 		$courses = array();
 		while ($row = mysql_fetch_array($result4)) {
 			$courseid = $row['course_id'];
 			$courses[] = $courseid;
 		}
-	
+		if(empty($courses)) {
+			echo "<li>No courses found :(</li></ul></div></div>";
+			}
+		else {
 # looking up associated course info
 		foreach ($courses as $value) {
 			$result5 = mysql_query("SELECT * FROM courses WHERE course_id = '$value'");
@@ -85,7 +112,9 @@ TEST;
 			$courseid = $course['course_id'];
 			echo "<li><a href=../courses/course-info.php?id=$courseid>$coursenum: $coursename</a></li>";
 			}
-		echo "</div></div>";
+		echo "</ul></div></div>";
+		}
+		}
 		}
 		}
 		}

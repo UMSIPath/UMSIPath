@@ -57,10 +57,15 @@ TEST;
 # finding associated course ID
 	$result = mysql_query("SELECT course_id FROM courses_skills WHERE skill_id = '$skillid'");
 	$courses = array();
+	
 	while ($row = mysql_fetch_array($result)) {
 		$courseid = $row['course_id'];
 		$courses[] = $courseid;
 	}
+	if(empty($courses)) {
+		echo "No results!</ul></div></div>";
+	}
+	else {
 	
 # looking up associated course info 
 	foreach ($courses as $value) {
@@ -72,6 +77,7 @@ TEST;
 		echo "<li><a href=../courses/course-info.php?id=$courseid>$coursenum: $coursename</a></li>";
 		}
 	echo"</ul></div></div>";
+}
 }
 }
 ?>                    
