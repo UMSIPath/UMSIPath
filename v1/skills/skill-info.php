@@ -70,10 +70,12 @@ while ($row = mysql_fetch_array($result)) {
                     	<h4>Related Courses</h4>
 <?php
 echo "<ul>";
-
+# checking for related courses
 if (empty($courses)) {
 	echo "<li>TBD</li>";
 	}
+
+# printing related courses
 else {
 foreach ($courses as $value) {
 	$result = mysql_query("SELECT * FROM courses WHERE course_id = '$value'");
@@ -101,6 +103,8 @@ while ($row = mysql_fetch_array($result)) {
 	$careerid = $row['career_id'];
 	$careers[] = $careerid;
 }
+
+# checking for related careers
 if (empty($careers)) {
 	echo "<ul><li>TBD</li></ul>";
 	}

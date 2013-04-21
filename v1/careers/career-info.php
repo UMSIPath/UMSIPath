@@ -64,8 +64,18 @@ echo "$careername";
 <?php
 $result2 = mysql_query("SELECT skill_id FROM careers_skills WHERE career_id = '$careerid'");
 
-# ADD CHECK FOR IF CAREER HAS NO SKILLS
+# checking for related skills
+$test = mysql_fetch_array($result2);
+if (empty($test)) {
+echo <<< TEST
+	
+	<div class="related-wrapper">
+    	<div class="related-left"><h5><a href=#>TBD</a></h5></div>	
+TEST;
+}
+else {
 
+# printing related skills
 while ($row = mysql_fetch_array($result2)) {
 	$skillid = $row['skill_id'];
 	$result3 = mysql_query("SELECT * FROM skills WHERE skill_id = '$skillid'");
@@ -92,6 +102,7 @@ TEST;
 		echo "<div class=\"related-right\"><ul><li><a href=#>TBD</li></ul></div></div><div id=\"rsidebar-divider\"></div>";
 	}	
 	else {
+
 # looking up associated course info
 	echo "<div class=\"related-right\"><ul>";
 	foreach ($courses as $value) {

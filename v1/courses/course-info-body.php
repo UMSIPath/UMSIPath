@@ -43,6 +43,20 @@ HEY;
                     <div id="rsidebar-divider-top"></div> <!-- don't move me -->
 <?php
 $result2 = mysql_query("SELECT skill_id FROM courses_skills WHERE course_id = '$id'");
+
+# checking for related skills
+$testing = mysql_fetch_array($result2);
+if (empty($testing)) {
+
+echo <<< TEST
+	
+	<div class="related-wrapper">
+    	<div class="related-left"><h5><a href="#">TBD</a></h5></div>	
+TEST;
+
+}
+else {
+
 while ($row = mysql_fetch_array($result2)) {
 	$skillid = $row['skill_id'];
 	$result3 = mysql_query("SELECT * FROM skills WHERE skill_id = '$skillid'");
@@ -62,9 +76,17 @@ TEST;
 		$careers[] = $careerid;
 	}
 
+	echo "<div class=\"related-right\"><ul>";
+
+# checking for related careers
+
+if (empty($careers)) {
+	echo "<li><a href=#>TBD</a></li>";
+	echo "</ul></div></div><div id=\"rsidebar-divider\"></div>";
+}
+else {
 
 # looking up associated career info
-	echo "<div class=\"related-right\"><ul>";
 	foreach ($careers as $value) {
 		$result5 = mysql_query("SELECT * FROM careers WHERE career_id = '$value'");
 		$career = mysql_fetch_assoc($result5);
@@ -74,6 +96,8 @@ TEST;
 		echo "<li><a href=../careers/career-info.php?id=$careerid>$careername</a></li>";
 		}
 	echo "</ul></div></div><div id=\"rsidebar-divider\"></div>";
+	}
+	}
 	}
 ?>                
             
