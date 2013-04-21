@@ -699,7 +699,7 @@ h2.section-descriptor#careers {
 	width: 125px;
 }
 
-#save-btn {
+#save-btn.default {
    padding: 11px;
    text-align: center;
    width: 100px;
@@ -718,7 +718,7 @@ h2.section-descriptor#careers {
 	letter-spacing:1px;
 }
 
-#save-btn:hover {
+#save-btn.default:hover {
 	background-color:#66BEE3;
 	
 	  /* transitions and animations */
@@ -727,6 +727,11 @@ h2.section-descriptor#careers {
   -ms-transition: background-color .2s ease;
   -o-transition: background-color .2s ease;
   transition: background-color .2s ease;
+}
+
+#save-btn.inactive {
+	background: #8A939D;
+	cursor:default;
 }
 
 #page-nav-btns {
