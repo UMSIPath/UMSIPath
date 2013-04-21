@@ -10,7 +10,7 @@ $(document).ready (function() {
 		var obj_type = $btn.data('type');
 		
 		$.ajax({
-			url: '../save-btn.php',/* PHP file which does the save function */
+			url: '../savebtn.php',/* PHP file which does the save function */
 			type: "POST",
 			data: {'user':user_id,'oid':obj_id,'type':obj_type},
 			success:function(data){
