@@ -733,6 +733,7 @@ h2.section-descriptor#careers {
 	background: #8A939D;
 	cursor:default;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	padding: 11px;
     text-align: center;
     width: 100px;
@@ -749,6 +750,24 @@ h2.section-descriptor#careers {
 	letter-spacing:1px;
 =======
 >>>>>>> Revert "save btn css change"
+=======
+	padding: 11px;
+   text-align: center;
+   width: 100px;
+   height: 12px;
+   border-radius: 20px;
+   text-decoration: none;
+   background: #29ABE2;
+   color: #fff;
+   display:block;
+   	margin-top: 50px;
+
+   
+   font-family: proxima-nova-semibold, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	text-transform:uppercase;
+	font-size:13px;
+	letter-spacing:1px;
+>>>>>>> Revert "Revert "save btn css change""
 }
 
 #page-nav-btns {
