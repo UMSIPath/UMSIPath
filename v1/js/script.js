@@ -14,7 +14,7 @@ $(document).ready (function() {
 			type: "POST",
 			data: {'user':user_id,'oid':obj_id,'type':obj_type},
 			success:function(data){
-				$('.save-btn').removeClass("default").addClass("inactive");
+				$('#save-btn').removeClass("default").addClass("inactive");
 				console.log(data);
 			}
 		});
