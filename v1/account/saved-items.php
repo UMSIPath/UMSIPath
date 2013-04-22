@@ -1,4 +1,8 @@
-<?php include('../includes/head.php'); ?>
+<?php include('../includes/head.php'); 
+
+require_once "../db.php";
+session_start();
+?>
     <title>UMSI / Discover: User Profile</title>
     </head>
 
@@ -33,9 +37,15 @@
 #this is for dumping the courses
 $savedcourses = mysql_query("SELECT course_id FROM students_courses WHERE student_id = '5'");
 $courses = array();
-while ($row = mysql_fetch_arracy($savedcourses)) {
+while ($row = mysql_fetch_array($savedcourses)) {
     $courseid = $row['course_id'];
     $courses[] = $courseid;
+    }
+foreach ($courses as $courseitem){
+$coursename = mysql_query("SELECT course_title FROM courses WHERE course_id = '$courseitem'");
+while ($row = mysql_fetch_array($coursename)) {
+    echo $row['course_title'];
+    }
     }
 
 ?>
