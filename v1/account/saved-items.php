@@ -34,7 +34,8 @@ session_start();
                 <p class="hp-mission">
                 
 <?php
-#this is for dumping the courses
+#this is for displaying the courses
+echo "COURSES: ";
 $savedcourses = mysql_query("SELECT course_id FROM students_courses WHERE student_id = '5'");
 $courses = array();
 while ($row = mysql_fetch_array($savedcourses)) {
@@ -45,6 +46,39 @@ foreach ($courses as $courseitem){
 $coursename = mysql_query("SELECT course_title FROM courses WHERE course_id = '$courseitem'");
 while ($row = mysql_fetch_array($coursename)) {
     echo $row['course_title'];
+    }
+    }
+
+
+#this is for displaying the skills
+echo "
+SKILLS: ";
+$savedskills = mysql_query("SELECT skill_id FROM students_skills WHERE student_id = '5'");
+$skills = array();
+while ($row = mysql_fetch_array($savedskills)) {
+    $skillid = $row['skill_id'];
+    $skills[] = $skillid;
+    }
+foreach ($skills as $skillitem){
+$skillname = mysql_query("SELECT skill_name FROM skills WHERE skill_id = '$skillitem'");
+while ($row = mysql_fetch_array($skillname)) {
+    echo $row['skill_name'];
+    }
+    }
+
+#this is for displaying the careers
+echo "
+CAREERS: ";
+$savedskills = mysql_query("SELECT skill_id FROM students_skills WHERE student_id = '5'");
+$skills = array();
+while ($row = mysql_fetch_array($savedskills)) {
+    $skillid = $row['skill_id'];
+    $skills[] = $skillid;
+    }
+foreach ($skills as $skillitem){
+$skillname = mysql_query("SELECT skill_name FROM skills WHERE skill_id = '$skillitem'");
+while ($row = mysql_fetch_array($skillname)) {
+    echo $row['skill_name'];
     }
     }
 
