@@ -1,4 +1,6 @@
 <?php
+require_once "db.php";
+session_start();
 
 if($_POST['type'] == 'course') {
 	$tablename = "students_courses";
@@ -13,10 +15,13 @@ if($_POST['type'] == 'career') {
     $columnheader = "career_id";
 }
 
+
+
 $oid = $_POST['oid'];
 $user = $_POST['user'];
 
-$sql = "INSERT INTO $tablename ('$columnheader', 'student_id') VALUES ('$oid', '$user')";
+$sql = "INSERT INTO $tablename ($columnheader, 'student_id') VALUES ('$oid', '$user')";
+mysql_query($sql) or die('sorry.');
 
 echo 'success';
 echo $oid;
