@@ -1,4 +1,7 @@
-<?php include('../includes/head.php'); ?>
+<?php include('../includes/head.php'); 
+require_once "../db.php";
+session_start();
+?>
     <title>UMSI / Discover: User Profile</title>
     </head>
 
