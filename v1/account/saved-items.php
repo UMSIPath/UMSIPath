@@ -51,8 +51,7 @@ while ($row = mysql_fetch_array($coursename)) {
 
 
 #this is for displaying the skills
-echo "
-SKILLS: ";
+echo "SKILLS: ";
 $savedskills = mysql_query("SELECT skill_id FROM students_skills WHERE student_id = '5'");
 $skills = array();
 while ($row = mysql_fetch_array($savedskills)) {
@@ -67,18 +66,17 @@ while ($row = mysql_fetch_array($skillname)) {
     }
 
 #this is for displaying the careers
-echo "
-CAREERS: ";
-$savedskills = mysql_query("SELECT skill_id FROM students_skills WHERE student_id = '5'");
-$skills = array();
-while ($row = mysql_fetch_array($savedskills)) {
-    $skillid = $row['skill_id'];
-    $skills[] = $skillid;
+echo "CAREERS: ";
+$savedcareers = mysql_query("SELECT career_id FROM students_careers WHERE student_id = '5'");
+$careers = array();
+while ($row = mysql_fetch_array($savedcareers)) {
+    $careerid = $row['career_id'];
+    $careers[] = $careerid;
     }
-foreach ($skills as $skillitem){
-$skillname = mysql_query("SELECT skill_name FROM skills WHERE skill_id = '$skillitem'");
-while ($row = mysql_fetch_array($skillname)) {
-    echo $row['skill_name'];
+foreach ($careers as $careeritem){
+$careername = mysql_query("SELECT career_title FROM careers WHERE career_id = '$careeritem'");
+while ($row = mysql_fetch_array($careername)) {
+    echo $row['career_title'];
     }
     }
 
