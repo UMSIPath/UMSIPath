@@ -37,7 +37,8 @@ while ($row = mysql_fetch_arracy($savedcourses)) {
     $courseid = $row['course_id'];
     $courses[] = $courseid;
     }
-    
+
+?>
                 
                 
                 </p>
