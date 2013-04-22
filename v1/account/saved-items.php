@@ -27,7 +27,20 @@
         <div id="hp-mission-wrap">
         	<div id="hp-mission">
             	<h1 class="hp-mission">My Saved Items</h1>
-                <p class="hp-mission">My items here.</p>
+                <p class="hp-mission">
+                
+<?php
+#this is for dumping the courses
+$savedcourses = mysql_query("SELECT course_id FROM students_courses WHERE student_id = '5'");
+$courses = array();
+while ($row = mysql_fetch_arracy($savedcourses)) {
+    $courseid = $row['course_id'];
+    $courses[] = $courseid;
+    }
+    
+                
+                
+                </p>
             </div>
         </div> <!-- end main -->           	
                 </div> 
