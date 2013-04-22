@@ -732,6 +732,22 @@ h2.section-descriptor#careers {
 #save-btn.inactive {
 	background: #8A939D;
 	cursor:default;
+	padding: 11px;
+   text-align: center;
+   width: 100px;
+   height: 12px;
+   border-radius: 20px;
+   text-decoration: none;
+   background: #29ABE2;
+   color: #fff;
+   display:block;
+   	margin-top: 50px;
+
+   
+   font-family: proxima-nova-semibold, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	text-transform:uppercase;
+	font-size:13px;
+	letter-spacing:1px;
 }
 
 #page-nav-btns {
