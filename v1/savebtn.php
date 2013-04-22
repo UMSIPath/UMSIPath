@@ -20,12 +20,9 @@ if($_POST['type'] == 'career') {
 $oid = $_POST['oid'];
 $user = $_POST['user'];
 
-$sql = "INSERT INTO $tablename ($columnheader, 'student_id') VALUES ('$oid', '$user')";
+$sql = "INSERT INTO $tablename ($columnheader, student_id) VALUES ('$oid', '$user')";
 mysql_query($sql) or die('sorry.');
 
 echo 'success';
-echo $oid;
-echo $tablename;
-echo $columnheader;
-echo $user;
+
 ?>
