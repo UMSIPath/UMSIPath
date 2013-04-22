@@ -32,7 +32,7 @@ $uid = "5";
 ?>
             	
             	</h1></div>
-               <div id="save-btn-area">
+                <div id="save-btn-area">
                 	<div id="btn-wrap">
                     	<a href="#" id="save-btn" class="default" data-num="<?php echo $id;?>" data-type="<?php echo $type; ?>" data-user="<?php echo $uid; ?>">Save</a>
                     </div>
