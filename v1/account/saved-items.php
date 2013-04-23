@@ -35,7 +35,7 @@ session_start();
                 
 <?php
 #this is for displaying the courses
-echo "COURSES: ";
+echo "COURSES: <br>";
 $savedcourses = mysql_query("SELECT course_id FROM students_courses WHERE student_id = '5'");
 $courses = array();
 while ($row = mysql_fetch_array($savedcourses)) {
@@ -46,12 +46,13 @@ foreach ($courses as $courseitem){
 $coursename = mysql_query("SELECT course_title FROM courses WHERE course_id = '$courseitem'");
 while ($row = mysql_fetch_array($coursename)) {
     echo $row['course_title'];
+	echo "<br>";
     }
     }
 
 
 #this is for displaying the skills
-echo "SKILLS: ";
+echo "<br>SKILLS: <br>";
 $savedskills = mysql_query("SELECT skill_id FROM students_skills WHERE student_id = '5'");
 $skills = array();
 while ($row = mysql_fetch_array($savedskills)) {
@@ -62,11 +63,12 @@ foreach ($skills as $skillitem){
 $skillname = mysql_query("SELECT skill_name FROM skills WHERE skill_id = '$skillitem'");
 while ($row = mysql_fetch_array($skillname)) {
     echo $row['skill_name'];
+	echo "<br>";
     }
     }
 
 #this is for displaying the careers
-echo "CAREERS: ";
+echo "<br>CAREERS: <br>";
 $savedcareers = mysql_query("SELECT career_id FROM students_careers WHERE student_id = '5'");
 $careers = array();
 while ($row = mysql_fetch_array($savedcareers)) {
