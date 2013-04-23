@@ -1,12 +1,7 @@
-UMSIPath
-========
+#SI 664: UMSI/Discover course discovery system
 
-SI 664 Project
+Group members: Ying Ying Liu, Edgar Nuñez, Emily Reynolds, Jessica Schaengold, Maura Youngman
 
-Hello friends
-
-<<<<<<< HEAD
-Hello Team! Edgar here.
-=======
-HELLOOOO
->>>>>>> Added a greeting
+* Folder "v1" contains current site version.
+* Folder "database" contains current and former versions of MySQL database.
+* Folder "testCode" contains additional code used during development.

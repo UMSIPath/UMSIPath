@@ -1,5 +1,0 @@
-"1";"Jessica";"Schaengold";"jschaen";"password";"current"
-"2";"Edgar";"Nunez";"enunez";"password";"current"
-"3";"Emily";"Reynolds";"ereynolds";"password";"current"
-"4";"Maura";"Youngman";"myoung";"password";"current"
-"5";"Ray";"Alexander";"ralex";"password";"current"

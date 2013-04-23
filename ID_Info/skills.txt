@@ -1,7 +1,0 @@
-"1";"GoldenThread"
-"2";"PHP"
-"3";"Film preservation"
-"4";"Sound preservation"
-"5";"Python"
-"6";"Contextual Inquiry"
-"7";"Team Building"
